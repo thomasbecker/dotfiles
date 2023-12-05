@@ -10,6 +10,6 @@ vim.api.nvim_create_autocmd("FileType", {
   group = augroup("pencil"),
   pattern = { "markdown", "mkd", "txt" },
   callback = function()
-    vim.cmd("Pencil")
+    vim.cmd("PencilHard")
   end,
 })
