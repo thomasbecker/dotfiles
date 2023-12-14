@@ -5,7 +5,7 @@ return {
     priority = 1000,
     name = "catppuccin",
     opts = {
-      flavour = "macchiato",
+      flavour = "mocha",
       transparent_background = true,
       dim_inactive = {
         enabled = true, -- dims the background color of inactive window
