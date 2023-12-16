@@ -34,5 +34,8 @@ MAGIC_ENTER_OTHER_COMMAND='lsna .'
 
 source ~/.aliases
 
+eval $(thefuck --alias)
+eval "$(zoxide init zsh)"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
