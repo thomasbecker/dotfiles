@@ -1,6 +1,10 @@
 # zdotdir
 
-> A sample Zsh config using the antidote plugin manager
+> My copy of [Antidote zdotdir: "https://github.com/getantidote/ZDOTDIR"]
+
+Used the zdotdir from antidote as the basis for my zsh config. I've added a few
+things that I use that aren't in the original, and I've removed a few things
+that I don't use.
 
 ## Description
 
@@ -8,7 +12,9 @@ This project aims to give you an example Zsh config that uses [antidote] as a pl
 
 ## What's included
 
-A sample antidote `.zsh_plugins.txt` file that bundles plugins with the following plugin provided features:
+A sample antidote `.zsh_plugins.txt` file that bundles plugins with the
+following plugin provided features:
+
 - Better Zsh defaults using [zsh-utils](https://github.com/belak/zsh-utils)
 - [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [History substring searching](https://github.com/zsh-users/zsh-history-substring-search)
