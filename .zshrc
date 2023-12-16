@@ -18,17 +18,12 @@ setopt extended_glob
 ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
 fpath=($ZFUNCDIR $fpath)
 autoload -Uz $fpath[1]/*(.:t) 
-#autoload -Uz compinit
-#compinit
+autoload -Uz compinit && compinit
 
 # Source zstyles you might use with antidote.
 [[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
 
-source ~/.oh-my-zsh/oh-my-zsh.sh
-
-# Create an amazing Zsh config using antidote plugins.
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
-antidote load
+#source ~/.oh-my-zsh/oh-my-zsh.sh
 
 MAGIC_ENTER_OTHER_COMMAND='lsna .'
 
@@ -36,6 +31,10 @@ source ~/.aliases
 
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
+
+# Create an amazing Zsh config using antidote plugins.
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
