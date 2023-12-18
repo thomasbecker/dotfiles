@@ -16,18 +16,18 @@ ohmyzsh/ohmyzsh path:plugins/compleat
 ohmyzsh/ohmyzsh path:plugins/copybuffer
 ohmyzsh/ohmyzsh path:plugins/copyfile
 ohmyzsh/ohmyzsh path:plugins/copypath
-ohmyzsh/ohmyzsh path:plugins/docker kind:defer
+ohmyzsh/ohmyzsh path:plugins/docker
 ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
 ohmyzsh/ohmyzsh path:plugins/fzf
-ohmyzsh/ohmyzsh path:plugins/gh kind:defer
+ohmyzsh/ohmyzsh path:plugins/gh
 ohmyzsh/ohmyzsh path:plugins/git
-ohmyzsh/ohmyzsh path:plugins/kubectl kind:defer
+ohmyzsh/ohmyzsh path:plugins/kubectl
 ohmyzsh/ohmyzsh path:plugins/magic-enter
-ohmyzsh/ohmyzsh path:plugins/thefuck kind:defer
-ohmyzsh/ohmyzsh path:plugins/zsh-history-substring-search kind:defer
+ohmyzsh/ohmyzsh path:plugins/thefuck
+ohmyzsh/ohmyzsh path:plugins/zsh-history-substring-search
 
-zsh-users/zsh-syntax-highlighting kind:defer
+zsh-users/zsh-syntax-highlighting
 
 
 ### Completions
@@ -46,5 +46,5 @@ zsh-users/zsh-syntax-highlighting kind:defer
 zsh-users/zsh-completions path:src kind:fpath
 
 # These popular core plugins should be loaded at the end
-zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search
