@@ -1,6 +1,5 @@
 ### .gitignore
 
-.aliases
 .antidote/
 .zcompcache/
 .zsh_sessions/
@@ -16,3 +15,6 @@
 
 .iterm2
 .iterm2_shell_integration.zsh
+
+.aliases_host
+.zshenv_host
