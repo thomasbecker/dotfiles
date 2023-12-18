@@ -1,5 +1,6 @@
 ### .gitignore
 
+.aliases
 .antidote/
 .zcompcache/
 .zsh_sessions/
@@ -12,3 +13,5 @@
 *.zwc
 *.zwc.old
 ~*
+
+.iterm2
