@@ -25,7 +25,7 @@ autoload -Uz compinit && compinit
 
 MAGIC_ENTER_OTHER_COMMAND='lsna .'
 
-source ~/.aliases
+source ~/.config/zsh/.aliases
 
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
