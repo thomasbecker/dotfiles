@@ -12,9 +12,11 @@ alias g=git
 alias vi=nvim
 
 # more ways to ls
-alias ll='ls -lh'
-alias la='ls -lAh'
-alias ldot='ls -ld .*'
+alias ls='eza'
+alias lsoa='eza -la -sold'
+alias lsna='eza -la -snew'
+alias lso='eza -l -sold'
+alias lsn='eza -l -snew'
 
 # fix common typos
 alias quit='exit'
@@ -39,6 +41,15 @@ alias please=sudo
 alias zshrc='${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc'
 alias zbench='for i in {1..10}; do /usr/bin/time zsh -lic exit; done'
 alias zdot='cd ${ZDOTDIR:-~}'
+alias ssh='ssh -Y'
+alias scp='noglob scp'
+alias mci='mvn -T 1C clean install'
+alias mcist='mvn -T 1C clean install -DskipTests'
+alias thomasgrep='find . -type f -exec grep -li thomas {} \;'
+alias kp='kubectl proxy &'
+alias "??"="gh copilot suggest -t shell"
+alias "?git"="gh copilot suggest -t git"
+alias "?gh"="gh copilot suggest -t gh"
+alias gce="gh copilot explain"
 
-# add host specific aliases
-source '${DOTDIR:-~}/.aliases_host'
+source ~/.config/zsh/.aliases_host

@@ -20,12 +20,7 @@ fpath=($ZFUNCDIR $fpath)
 autoload -Uz $fpath[1]/*(.:t) 
 autoload -Uz compinit && compinit
 
-# Source zstyles you might use with antidote.
-[[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
-
 MAGIC_ENTER_OTHER_COMMAND='lsna .'
-
-source ~/.config/zsh/.aliases
 
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
@@ -41,6 +36,11 @@ mkdir -p "$ZSH_CACHE_DIR/completions"
 (( ${fpath[(Ie)"$ZSH_CACHE_DIR/completions"]} )) || fpath=("$ZSH_CACHE_DIR/completions" $fpath)
 
 antidote load
+
+# Source zstyles you might use with antidote.
+[[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
+
+#source ~/.config/zsh/.aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
