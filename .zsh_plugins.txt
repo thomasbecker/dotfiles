@@ -10,7 +10,7 @@ $ZDOTDIR/.aliases
 romkatv/powerlevel10k
 Aloxaf/fzf-tab
 
-ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+ohmyzsh/ohmyzsh path:lib
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/compleat
 ohmyzsh/ohmyzsh path:plugins/copybuffer

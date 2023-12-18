@@ -23,8 +23,6 @@ autoload -Uz compinit && compinit
 # Source zstyles you might use with antidote.
 [[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
 
-#source ~/.oh-my-zsh/oh-my-zsh.sh
-
 MAGIC_ENTER_OTHER_COMMAND='lsna .'
 
 source ~/.aliases
@@ -32,8 +30,16 @@ source ~/.aliases
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 
-# Create an amazing Zsh config using antidote plugins.
+# prepare antidote
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+
+# set omz variables prior to loading omz plugins
+ZSH=$(antidote path ohmyzsh/ohmyzsh)
+ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
+[[ -d $ZSH_CACHE_DIR ]] || mkdir -p $ZSH_CACHE_DIR
+mkdir -p "$ZSH_CACHE_DIR/completions"
+(( ${fpath[(Ie)"$ZSH_CACHE_DIR/completions"]} )) || fpath=("$ZSH_CACHE_DIR/completions" $fpath)
+
 antidote load
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
