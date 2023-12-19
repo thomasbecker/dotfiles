@@ -25,7 +25,6 @@ ohmyzsh/ohmyzsh path:plugins/git
 ohmyzsh/ohmyzsh path:plugins/kubectl
 ohmyzsh/ohmyzsh path:plugins/magic-enter
 ohmyzsh/ohmyzsh path:plugins/thefuck
-ohmyzsh/ohmyzsh path:plugins/zsh-history-substring-search
 
 zsh-users/zsh-syntax-highlighting
 
@@ -46,5 +45,5 @@ zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions path:src kind:fpath
 
 # These popular core plugins should be loaded at the end
-zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions
