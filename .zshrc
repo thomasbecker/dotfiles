@@ -22,9 +22,6 @@ autoload -Uz compinit && compinit
 
 MAGIC_ENTER_OTHER_COMMAND='lsna .'
 
-eval $(thefuck --alias)
-eval "$(zoxide init zsh)"
-
 # prepare antidote
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
@@ -40,7 +37,8 @@ antidote load
 # Source zstyles you might use with antidote.
 [[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
 
-#source ~/.config/zsh/.aliases
+eval $(thefuck --alias)
+eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
