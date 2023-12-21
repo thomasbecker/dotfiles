@@ -11,6 +11,16 @@ return {
       topdelete = { text = "‾" },
       changedelete = { text = "~" },
     },
+    signcolumn = true,
+    numhl = true,
+    linehl = true,
+    word_diff = true,
+    current_line_blame = true,
+    current_line_blame_opts = {
+      virt_text = true,
+      virt_text_pos = "eol",
+      delay = 100,
+    },
     on_attach = function(bufnr)
       vim.keymap.set(
         "n",
