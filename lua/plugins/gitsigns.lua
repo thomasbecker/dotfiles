@@ -18,9 +18,11 @@ return {
     current_line_blame = true,
     current_line_blame_opts = {
       virt_text = true,
-      virt_text_pos = "eol",
+      virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
       delay = 100,
+      virt_text_priority = 100,
     },
+    current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d %H:%M:%S> - <summary>",
     on_attach = function(bufnr)
       vim.keymap.set(
         "n",
