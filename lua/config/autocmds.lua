@@ -13,3 +13,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.cmd("PencilHard")
   end,
 })
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  callback = function()
+    vim.cmd("EslintFixAll")
+    Utils.format({ force = true })
+  end,
+  group = autogroup_eslint_lsp,
+})
