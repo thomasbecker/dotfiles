@@ -1,6 +1,10 @@
 return {
   {
     "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
     keys = {
       {
         "<leader>a",
@@ -17,6 +21,22 @@ return {
         end,
         silent = true,
         desc = "Harpoon toggle",
+      },
+      {
+        "<C-S-P>",
+        function()
+          require("harpoon.ui").nav_prev()
+        end,
+        silent = true,
+        desc = "Harpoon prev",
+      },
+      {
+        "<C-S-N>",
+        function()
+          require("harpoon.ui").nav_next()
+        end,
+        silent = true,
+        desc = "Harpoon next",
       },
     },
   },
