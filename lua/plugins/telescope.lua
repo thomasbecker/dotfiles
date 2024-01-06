@@ -11,6 +11,14 @@ return {
         function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
         desc = "Find Plugin File",
       },
+      -- add a keymap to browse zsh files
+      {
+        "<leader>fz",
+        function()
+          require("telescope.builtin").find_files({ cwd = "~/.config/zsh", hidden = true })
+        end,
+        desc = "Find Zsh Files",
+      },
     },
     -- change some options
     opts = {
@@ -19,6 +27,7 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+        file_ignore_patterns = { "node_modules", ".git", "%.class" },
         vimgrep_arguments = {
           "rg",
           "--no-heading",
