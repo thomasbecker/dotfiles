@@ -5,8 +5,6 @@ rummik/zsh-tailf
 #mattmc3/zman
 #agkozak/zsh-z
 
-$ZDOTDIR/.aliases
-
 romkatv/powerlevel10k
 Aloxaf/fzf-tab
 
@@ -47,3 +45,5 @@ zsh-users/zsh-completions path:src kind:fpath
 # These popular core plugins should be loaded at the end
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
+
+$ZDOTDIR/.aliases

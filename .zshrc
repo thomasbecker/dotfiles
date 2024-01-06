@@ -20,7 +20,7 @@ fpath=($ZFUNCDIR $fpath)
 autoload -Uz $fpath[1]/*(.:t) 
 autoload -Uz compinit && compinit
 
-MAGIC_ENTER_OTHER_COMMAND='lsna .'
+MAGIC_ENTER_OTHER_COMMAND='ll'
 
 # prepare antidote
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
