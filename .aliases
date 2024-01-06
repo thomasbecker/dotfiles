@@ -14,7 +14,7 @@ alias vi=nvim
 # more ways to ls
 alias ls='eza'
 alias lsoa='eza -la -sold'
-alias lsna='eza -la -snew'
+alias ll='eza -la -snew'
 alias lso='eza -l -sold'
 alias lsn='eza -l -snew'
 
