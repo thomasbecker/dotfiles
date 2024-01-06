@@ -47,7 +47,7 @@ return {
       {
         "<C-S-P>",
         function()
-          require("harpoon"):list():prev()
+          require("harpoon"):list():prev({ ui_nav_wrap = true })
         end,
         silent = true,
         desc = "Harpoon prev",
@@ -55,7 +55,7 @@ return {
       {
         "<C-S-N>",
         function()
-          require("harpoon"):list():next()
+          require("harpoon"):list():next({ ui_nav_wrap = true })
         end,
         silent = true,
         desc = "Harpoon next",
