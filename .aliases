@@ -5,7 +5,7 @@
 
 # single character aliases - be sparing!
 alias _=sudo
-alias l=ls
+alias l=eza
 alias g=git
 
 # mask built-ins with better defaults
