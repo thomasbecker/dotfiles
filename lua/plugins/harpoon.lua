@@ -7,7 +7,7 @@ return {
     },
     init = function()
       harpoon = require("harpoon")
-      harpoon:setup()
+      harpoon:setup({})
 
       harpoon:extend({
         UI_CREATE = function(cx)
