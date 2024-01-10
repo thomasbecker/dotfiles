@@ -11,7 +11,7 @@ return {
         "eslint_d",
         "flake8",
         "goimports-reviser",
-        "golang-ci-lint",
+        "golangci-lint",
         "golines",
         "json-lsp",
         "lua-language-server",
