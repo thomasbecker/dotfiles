@@ -5,6 +5,7 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
+    cmd = "Harpoon",
     init = function()
       harpoon = require("harpoon")
       harpoon:setup({})
