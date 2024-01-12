@@ -5,11 +5,15 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    cmd = "Harpoon",
+    opts = {
+      settings = {
+        save_on_toggle = true,
+        save_on_change = true,
+      },
+    },
     init = function()
-      harpoon = require("harpoon")
+      local harpoon = require("harpoon")
       harpoon:setup({})
-
       harpoon:extend({
         UI_CREATE = function(cx)
           vim.keymap.set("n", "<C-v>", function()
@@ -25,24 +29,7 @@ return {
           end, { buffer = cx.bufnr })
         end,
       })
-      local conf = require("telescope.config").values
-      function Toggle_telescope(harpoon_files)
-        local file_paths = {}
-        for _, item in ipairs(harpoon_files.items) do
-          table.insert(file_paths, item.value)
-        end
-
-        require("telescope.pickers")
-          .new({}, {
-            prompt_title = "Harpoon Marks",
-            finder = require("telescope.finders").new_table({
-              results = file_paths,
-            }),
-            previewer = conf.file_previewer({}),
-            sorter = conf.generic_sorter({}),
-          })
-          :find()
-      end
+      harpoon:extend(require("harpoon.extensions").telescope)
     end,
     keys = {
       {
@@ -56,8 +43,7 @@ return {
       {
         "<C-e>",
         function()
-          local harpoon = require("harpoon")
-          Toggle_telescope(harpoon:list())
+          require("telescope").extensions.harpoon.marks()
         end,
         silent = true,
         desc = "Harpoon toggle",
