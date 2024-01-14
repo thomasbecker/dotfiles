@@ -1,9 +1,20 @@
+-- supertab -> cmp -> luasnip -> tabout
 return {
-  -- then: setup supertab in cmp
+  {
+    "L3MON4D3/LuaSnip",
+    keys = function()
+      return {}
+    end,
+  },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
+      "abecodes/tabout.nvim",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "saadparwaiz1/cmp_luasnip",
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
@@ -24,8 +35,9 @@ return {
           -- this way you will only jump inside the snippet region
           elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
-          elseif has_words_before() then
-            cmp.complete()
+          --          elseif has_words_before() then
+          --            print("heeeeellloooooo has words before")
+          --            cmp.complete()
           else
             fallback()
           end
