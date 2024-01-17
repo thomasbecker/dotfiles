@@ -13,8 +13,6 @@ fi
 
 # Zsh options.
 setopt extended_glob
-
-
 MAGIC_ENTER_OTHER_COMMAND='ll'
 
 # prepare antidote
@@ -27,13 +25,13 @@ ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
 mkdir -p "$ZSH_CACHE_DIR/completions"
 (( ${fpath[(Ie)"$ZSH_CACHE_DIR/completions"]} )) || fpath=("$ZSH_CACHE_DIR/completions" $fpath)
 
-antidote load
-
-# Autoload functions you might want to use with antidote.
+## Autoload functions you might want to use with antidote.
 ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
 fpath=($ZFUNCDIR $fpath)
 autoload -Uz $fpath[1]/*(.:t) 
-autoload -Uz compinit && compinit
+#autoload -Uz compinit && compinit
+
+antidote load
 
 # Source zstyles you might use with antidote.
 [[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
