@@ -29,7 +29,7 @@ mkdir -p "$ZSH_CACHE_DIR/completions"
 ZFUNCDIR=${ZFUNCDIR:-$ZDOTDIR/functions}
 fpath=($ZFUNCDIR $fpath)
 autoload -Uz $fpath[1]/*(.:t) 
-#autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit
 
 antidote load
 
