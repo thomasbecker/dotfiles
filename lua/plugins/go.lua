@@ -18,6 +18,7 @@ return {
       { mode = { "n" }, "<leader>gb", "<cmd>GoBuild<cr>", desc = "Go build" },
       { mode = { "n" }, "<leader>gr", "<cmd>GoRun<cr>", desc = "Go run" },
       { mode = { "n" }, "<leader>gt", "<cmd>GoTest<cr>", desc = "Go test" },
+      { mode = { "n" }, "<leader>ga", "<cmd>GoTestSum<cr>", desc = "Go test sum" },
       { mode = { "n" }, "<leader>gc", "<cmd>GoCoverage<cr>", desc = "Go coverage toggle" },
       { mode = { "n" }, "<leader>gl", "<cmd>GoLint<cr>", desc = "Go lint" },
       { mode = { "n" }, "<leader>gd", "<cmd>GoDoc<cr>", desc = "Go doc" },
