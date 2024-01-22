@@ -26,10 +26,12 @@ export PAGER="${PAGER:-less}"
 # Ensure path arrays do not contain duplicates.
 typeset -gU path fpath
 
+export GOBIN="$HOME/go/bin"
 # Set the list of directories that zsh searches for commands.
 path=(
   $HOME/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  $GOBIN
   $path
 )
