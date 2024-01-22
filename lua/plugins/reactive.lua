@@ -35,17 +35,17 @@ return {
               },
               y = {
                 winhl = {
-                  CursorLine = { bg = "#0010c2" },
+                  CursorLine = { bg = "#592d01" },
                 },
                 hl = {
-                  MyCursor = { bg = "#fdba74" },
+                  mycursor = { bg = "#fdba74" },
                 },
               },
             },
           },
           i = {
             winhl = {
-              CursorLine = { bg = "#042f2e" },
+              CursorLine = { bg = "#064725" },
             },
             hl = {
               MyCursor = { bg = "#5eead4" },
