@@ -16,6 +16,13 @@ return {
         end,
         desc = "Step Over",
       },
+      {
+        "<leader>dS",
+        function()
+          require("dap").stop()
+        end,
+        desc = "Stop",
+      },
     },
   },
   {
