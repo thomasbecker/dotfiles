@@ -27,7 +27,7 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
-        file_ignore_patterns = { "node_modules", ".git", "%.class" },
+        file_ignore_patterns = { "node_modules", "%.class" },
         vimgrep_arguments = {
           "rg",
           "--no-heading",
