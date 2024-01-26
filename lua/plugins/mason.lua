@@ -22,6 +22,7 @@ return {
         "gotestsum",
         "iferr",
         "impl",
+        "java-language-server",
         "json-lsp",
         "lua-language-server",
         "markdownlint",
