@@ -19,7 +19,7 @@ return {
       {
         "<leader>dS",
         function()
-          require("dap").stop()
+          require("dap").close()
         end,
         desc = "Stop",
       },
