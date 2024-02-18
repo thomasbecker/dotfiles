@@ -28,7 +28,7 @@ return {
       { mode = { "n", "x" }, "<leader>ri", "<cmd>Refactor inline_var<cr>", desc = "Refactor inline variable" },
       { mode = { "n" }, "<leader>rI", "<cmd>Refactor inline_func<cr>", desc = "Refactor inline function" },
 
-      { mode = { "n" }, "<leader>rb", "<cmd>Refactor extract_block<cr>", desc = "Refactor extract block" },
+      { mode = { "n" }, "<leader>rB", "<cmd>Refactor extract_block<cr>", desc = "Refactor extract block" },
       {
         mode = { "n" },
         "<leader>rbf",
