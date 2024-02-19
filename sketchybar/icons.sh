@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # General Icons
 LOADING=􀖇
@@ -6,11 +6,8 @@ APPLE=􀣺
 PREFERENCES=􀺽
 ACTIVITY=􀒓
 LOCK=􀒳
-MAIL=􀍜
-MAIL_OPEN=􀍜
 BELL=􀋚
 BELL_DOT=􀝗
-CALENDAR=􀐫
 
 # Git Icons
 GIT_ISSUE=􀍷
@@ -34,9 +31,27 @@ YABAI_FLOAT=􀢌
 YABAI_GRID=􀧍
 
 # Battery Icons
-BATTERY_FULL=􀛨
+BATTERY_100=􀛨
 BATTERY_75=􀺸
 BATTERY_50=􀺶
 BATTERY_25=􀛩
 BATTERY_0=􀛪
 BATTERY_CHARGING=􀢋
+
+# Volume Icons
+VOLUME_100=􀊩
+VOLUME_66=􀊧
+VOLUME_33=􀊥
+VOLUME_10=􀊡
+VOLUME_0=􀊣
+
+# WiFi
+WIFI_CONNECTED=􀙇
+WIFI_DISCONNECTED=􀙈
+
+# svim
+MODE_NORMAL=􀂯
+MODE_INSERT=􀂥
+MODE_VISUAL=􀂿
+MODE_CMD=􀂙
+MODE_PENDING=􀈏
