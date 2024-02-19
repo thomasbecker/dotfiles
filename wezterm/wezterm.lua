@@ -15,7 +15,7 @@ config.adjust_window_size_when_changing_font_size = false
 config.color_scheme = "catppuccin-mocha"
 
 config.scrollback_lines = 5000
-config.window_background_opacity = 0.85
+-- config.window_background_opacity = 0.85
 config.window_decorations = "RESIZE"
 config.window_frame = {
 	font = wezterm.font({ family = "Hack Nerd Font Mono", weight = "Bold" }),
@@ -136,12 +136,12 @@ config.leader = { key = "a", mods = "CMD", timeout_milliseconds = 1000 }
 config.keys = {
 	{ key = "0", mods = "CTRL", action = act.PaneSelect },
 	{
-		key = "h",
-		mods = "CMD",
+		key = "d",
+		mods = "CMD|SHIFT",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
-		key = "w",
+		key = "d",
 		mods = "CMD",
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
