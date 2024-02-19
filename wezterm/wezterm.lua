@@ -56,6 +56,8 @@ local tab_bar_colors = {
 	},
 }
 config.colors = {
+	cursor_bg = "#52ad70",
+	cursor_fg = "black",
 	tab_bar = {
 		-- The color of the strip that goes along the top of the window
 		-- (does not apply when fancy tab bar is in use)
