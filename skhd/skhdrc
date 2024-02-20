@@ -54,5 +54,5 @@ ctrl + alt - d : yabai --stop-service
 ctrl + alt - r : yabai --restart-service
 
 # Toggle sketchybar
-shift + alt - space : sketchybar --bar hidden=toggle && yabai -m config external_bar no
+shift + alt - space : sketchybar --bar hidden=toggle
 shift + alt - r : sketchybar --remove '/.*/' && sh -c 'export CONFIG_DIR=$HOME/.config/sketchybar && $CONFIG_DIR/sketchybarrc'
