@@ -7,8 +7,8 @@ wezterm.on("gui-startup", function()
 	local tab, pane, window = mux.spawn_window({})
 	window:gui_window():maximize()
 end)
-
-config.font = wezterm.font("JetBrains Mono")
+local font = "JetBrainsMono Nerd Font Mono"
+config.font = wezterm.font(font)
 config.font_size = 14.0
 config.adjust_window_size_when_changing_font_size = false
 -- config.color_scheme = "Tokyo Night Storm"
@@ -18,7 +18,7 @@ config.scrollback_lines = 5000
 -- config.window_background_opacity = 0.85
 config.window_decorations = "RESIZE"
 config.window_frame = {
-	font = wezterm.font({ family = "Hack Nerd Font Mono", weight = "Bold" }),
+	font = wezterm.font({ family = font, weight = "Bold" }),
 	font_size = 12.0,
 	active_titlebar_bg = "#333333",
 	inactive_titlebar_bg = "#333333",
