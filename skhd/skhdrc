@@ -1,7 +1,7 @@
 # move focus
+alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
-alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus last
 
 # rotate layout
@@ -27,15 +27,15 @@ shift + alt - e : yabai -m space --balance
 alt - p : yabai -m space --toggle padding ; yabai -m space --toggle gap
 
 # swap windows
+shift + alt - h : yabai -m window --swap west
 shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
-shift + alt - h : yabai -m window --swap west
 shift + alt - l : yabai -m window --swap east
 
 # move window and split
+ctrl + alt - h : yabai -m window --warp west
 ctrl + alt - j : yabai -m window --warp south
 ctrl + alt - k : yabai -m window --warp north
-ctrl + alt - h : yabai -m window --warp west
 ctrl + alt - l : yabai -m window --warp east
 
 # move window to space
