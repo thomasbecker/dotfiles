@@ -26,11 +26,6 @@ volume_icon=(
 	label.font="$FONT:Regular:14.0"
 )
 
-status_bracket=(
-	background.color=$BACKGROUND_1
-	background.border_color=$BACKGROUND_2
-)
-
 sketchybar --add slider volume right \
 	--set volume "${volume_slider[@]}" \
 	--subscribe volume volume_change \
