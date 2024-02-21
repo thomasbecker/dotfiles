@@ -6,8 +6,9 @@ source "$CONFIG_DIR/icons.sh"  # Loads all defined icons
 ITEM_DIR="$CONFIG_DIR/items"     # Directory where the items are configured
 PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
 
-FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
-PADDINGS=3    # All paddings use this value (icon, label, background)
+# FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
+FONT="JetBrainsMono Nerd Font Mono" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
+PADDINGS=3                          # All paddings use this value (icon, label, background)
 
 # Setting up and starting the helper process
 HELPER=git.felix.helper
@@ -82,7 +83,17 @@ source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/volume.sh"
 source "$ITEM_DIR/cpu.sh"
-source "$ITEM_DIR/svim.sh"
+source "$ITEM_DIR/network.sh"
+source "$ITEM_DIR/ram.sh"
+source "$ITEM_DIR/disk.sh"
+
+status_bracket=(
+	background.color="$BACKGROUND_1"
+	background.border_color="$BACKGROUND_2"
+)
+
+sketchybar --add bracket status brew github.bell wifi volume_icon \
+	--set status "${status_bracket[@]}"
 
 sketchybar --hotload on
 
