@@ -13,7 +13,7 @@ return {
     },
     signcolumn = true,
     numhl = true,
-    linehl = false,
+    linehl = true,
     word_diff = true,
     current_line_blame = true,
     current_line_blame_opts = {
