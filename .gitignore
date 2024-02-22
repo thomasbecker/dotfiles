@@ -4,7 +4,9 @@ simple-update-notifier
 configstore
 iterm2
 lazygit
+Google/*
 
 # The next lines all deserve their own repo
 nvim
 zsh
+wezterm
