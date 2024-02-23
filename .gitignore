@@ -5,6 +5,8 @@ configstore
 iterm2
 lazygit
 Google/*
+alias/
+nvm/
 
 # The next lines all deserve their own repo
 nvim
