@@ -11,6 +11,7 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "mkd", "txt" },
   callback = function()
     vim.cmd("PencilHard")
+    vim.g["pencil#conceallevel"] = 2
   end,
 })
 
