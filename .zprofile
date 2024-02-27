@@ -1,12 +1,9 @@
 #!/bin/zsh
-#
 # .zprofile - Zsh file loaded on login.
-#
 
 #
 # Browser
 #
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER="${BROWSER:-open}"
 fi
@@ -14,7 +11,6 @@ fi
 #
 # Editors
 #
-
 export EDITOR="${EDITOR:-vim}"
 export VISUAL="${VISUAL:-vim}"
 export PAGER="${PAGER:-less}"
@@ -22,6 +18,13 @@ export PAGER="${PAGER:-less}"
 #
 # Paths
 #
+
+#
+# nvm
+#
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU path fpath
