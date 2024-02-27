@@ -20,6 +20,16 @@ return {
         path = "/Users/tbecker/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal",
       },
     },
+    daily_notes = {
+      -- Optional, if you keep daily notes in a separate directory.
+      folder = "notes/dailies",
+      -- Optional, if you want to change the date format for the ID of daily notes.
+      -- date_format = "%Y-%m-%d",
+      -- Optional, if you want to change the date format of the default alias of daily notes.
+      -- alias_format = "%B %-d, %Y",
+      -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+      -- template = nil,
+    },
     -- Optional, customize how names/IDs for new notes are created.
     -- note_id_func = function(title)
     --   -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
@@ -40,8 +50,10 @@ return {
   },
   keys = {
     { mode = { "n" }, "<leader>on", "<cmd>ObsidianNew<cr>", desc = "Obsidian new" },
+    { mode = { "n" }, "<leader>od", "<cmd>ObsidianToday<cr>", desc = "Obsidian new daily today" },
     { mode = { "n" }, "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "Obsidian search" },
     { mode = { "n" }, "<leader>ot", "<cmd>ObsidianTags<cr>", desc = "Obsidian tags" },
+    { mode = { "n" }, "<leader>oe", "<cmd>ObsidianTemplate<cr>", desc = "Obsidian template" },
     { mode = { "n" }, "<leader>ow", "<cmd>ObsidianWorkspace<cr>", desc = "Obsidian workspaces" },
     { mode = { "n" }, "<leader>or", "<cmd>ObsidianRename<cr>", desc = "Obsidian rename" },
   },
