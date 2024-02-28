@@ -41,6 +41,7 @@ alias urlencode='python3 -c "import sys, urllib.parse as ul; \
 alias d='docker'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
+alias drmfa='docker rm -f $(docker ps -a -q)'
 
 # misc
 alias please=sudo
