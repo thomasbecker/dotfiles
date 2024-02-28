@@ -33,10 +33,12 @@ return {
           enable = true,
           goto_next_start = {
             ["]f"] = "@function.outer",
+            ["]fi"] = "@function.inner",
             ["]c"] = "@class.outer",
           },
           goto_next_end = {
             ["]F"] = "@function.outer",
+            ["]Fi"] = "@function.inner",
             ["]C"] = "@class.outer",
           },
           goto_previous_start = {
