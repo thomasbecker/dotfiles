@@ -37,6 +37,11 @@ alias urldecode='python3 -c "import sys, urllib.parse as ul; \
 alias urlencode='python3 -c "import sys, urllib.parse as ul; \
     print (ul.quote_plus(sys.argv[1]))"'
 
+# Docker
+alias d='docker'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+
 # misc
 alias please=sudo
 alias zshrc='${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc'
