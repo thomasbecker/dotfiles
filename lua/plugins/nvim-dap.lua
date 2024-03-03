@@ -27,6 +27,7 @@ return {
   },
   {
     "leoluz/nvim-dap-go",
+    ft = { "go", "gomod" },
     opts = {
       dap_configurations = {
         {
