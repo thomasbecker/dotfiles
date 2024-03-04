@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+jeffreytse/zsh-vi-mode
+
 https://github.com/peterhurford/up.zsh
 rummik/zsh-tailf
 #mattmc3/zman
@@ -28,7 +30,6 @@ ohmyzsh/ohmyzsh path:plugins/magic-enter
 ohmyzsh/ohmyzsh path:plugins/thefuck
 
 zsh-users/zsh-syntax-highlighting
-
 
 ### Completions
 #
