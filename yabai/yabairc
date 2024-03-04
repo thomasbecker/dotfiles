@@ -49,4 +49,11 @@ yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 yabai -m rule --add label="About This Mac" app="4ystem Information" title="About This Mac" manage=off
 
+# manage intellij but not its dialogs
+JB_Apps='^(Webstorm|IntelliJ IDEA)$'
+yabai -m rule --add app="${JB_Apps}" manage=off
+# If `Open last project when launch` is checked, add this rule. And make sure `always show project path` is also checked.
+# yabai -m rule --add app="${JB_Apps}" title=".*\[.*\].*" manage=on
+yabai -m rule --add app="${JB_Apps}" title="^$" manage=on
+
 echo "yabai configuration loaded.."
