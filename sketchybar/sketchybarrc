@@ -31,8 +31,8 @@ bar=(
 	corner_radius=9
 	padding_right=10
 	padding_left=18
-	y_offset=2
-	margin=2
+	y_offset=4
+	margin=8
 	topmost=window
 )
 
