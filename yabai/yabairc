@@ -27,7 +27,7 @@ yabai -m config \
 	window_animation_duration 0.0 \
 	window_opacity_duration 0.0 \
 	active_window_opacity 0.97 \
-	normal_window_opacity 0.85 \
+	normal_window_opacity 0.80 \
 	window_opacity on \
 	insert_feedback_color 0xffd75f5f \
 	split_ratio 0.50 \
