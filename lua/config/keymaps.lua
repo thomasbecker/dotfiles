@@ -12,8 +12,7 @@ map("n", "O", 'O<ESC>0"_D', { desc = "Insert new line above cursor" })
 
 map("n", "<C-j>", ":m .+<CR>==", { desc = "Move line down" })
 map("n", "<C-k>", ":m .-2<CR>==", { desc = "Move line up" })
-
-ap("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+map("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 map("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 map("i", "<C-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move line down" })
 map("i", "<C-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move line up" })
