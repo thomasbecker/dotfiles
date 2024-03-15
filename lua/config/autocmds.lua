@@ -6,14 +6,14 @@ local function augroup(name)
   return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
 end
 
-vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("pencil"),
-  pattern = { "markdown", "mkd", "txt" },
-  callback = function()
-    vim.cmd("PencilHard")
-    vim.g["pencil#conceallevel"] = 2
-  end,
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--   group = augroup("pencil"),
+--   pattern = { "markdown", "mkd", "txt" },
+--   callback = function()
+--     vim.cmd("PencilHard")
+--     vim.g["pencil#conceallevel"] = 2
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
