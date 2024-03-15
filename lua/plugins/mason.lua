@@ -20,6 +20,8 @@ return {
         "gomodifytags",
         "gotests",
         "gotestsum",
+        "gradle-language-server",
+        "groovy-language-server",
         "iferr",
         "impl",
         "java-language-server",
