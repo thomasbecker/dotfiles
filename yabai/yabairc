@@ -54,8 +54,9 @@ JB_Apps='^(Webstorm|IntelliJ IDEA)$'
 yabai -m rule --add app="${JB_Apps}" manage=off
 # If `Open last project when launch` is checked, add this rule. And make sure `always show project path` is also checked.
 # yabai -m rule --add app="${JB_Apps}" title=".*\[.*\].*" manage=on
-yabai -m rule --add app="${JB_Apps}" title="^$" manage=on
+yabai -m rule --add app="${JB_Apps}" title="( – )" manage=on
 
+yabai -m rule --add app="^IntelliJ IDEA-EAP$" title="( – )" manage=on
 borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
 # borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=10.0 &
 
