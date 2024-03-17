@@ -13,6 +13,7 @@ Aloxaf/fzf-tab
 belak/zsh-utils path:completion
 
 ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/brew
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/compleat
 ohmyzsh/ohmyzsh path:plugins/copybuffer
