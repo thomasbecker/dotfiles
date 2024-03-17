@@ -27,12 +27,16 @@ alt - e : yabai -m window --toggle split
 shift + alt - e : yabai -m space --balance
 
 # increase window size
-shift + alt - a : yabai -m window --resize left:-20:0
-shift + alt - w : yabai -m window --resize top:0:-20
+shift + alt - h : yabai -m window --resize left:-20:0
+shift + alt - j : yabai -m window --resize bottom:0:20
+shift + alt - k : yabai -m window --resize top:0:-20
+shift + alt - l : yabai -m window --resize right:20:0
 
 # decrease window size
-shift + cmd - s : yabai -m window --resize bottom:0:-20
-shift + cmd - w : yabai -m window --resize top:0:20
+shift + cmd - h : yabai -m window --resize left:20:0
+shift + cmd - j : yabai -m window --resize bottom:0:-20
+shift + cmd - k : yabai -m window --resize top:0:20
+shift + cmd - l : yabai -m window --resize right:-20:0
 
 # toggle padding and gap
 alt - p : sh -c '$HOME/.config/skhd/toggle-gaps.sh'
