@@ -54,8 +54,8 @@ ctrl + alt - k : yabai -m window --warp north
 ctrl + alt - l : yabai -m window --warp east
 
 # move window to space
-shift + alt -p : yabai -m window --space prev
-shift + alt -n : yabai -m window --space next
+shift + alt - p : yabai -m window --space prev
+shift + alt - n : yabai -m window --space next
 
 shift + alt - 1 : yabai -m window --space 1 && sketchybar --trigger windows_on_spaces
 shift + alt - 2 : yabai -m window --space 2 && sketchybar --trigger windows_on_spaces
