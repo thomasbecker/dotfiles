@@ -23,7 +23,7 @@ launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/d
 bar=(
 	height=45
 	color=$BAR_COLOR
-	border_width=6
+	border_width=2
 	border_color=$BAR_BORDER_COLOR
 	shadow=off
 	position=top
@@ -32,7 +32,7 @@ bar=(
 	padding_right=10
 	padding_left=18
 	y_offset=4
-	margin=16
+	margin=17
 	topmost=window
 )
 

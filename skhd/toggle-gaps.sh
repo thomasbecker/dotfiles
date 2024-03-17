@@ -6,7 +6,7 @@ if [[ -f /tmp/borders ]]; then
 	yabai -m space --padding abs:2:2:2:2 --gap abs:4
 	rm $borderFile
 else
-	borders width=5
+	borders width=4
 	yabai -m config external_bar main:45:0
 	yabai -m space --padding abs:20:20:20:20 --gap abs:20
 	touch $borderFile
