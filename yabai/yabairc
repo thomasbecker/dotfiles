@@ -17,7 +17,7 @@ yabai -m signal --add event=window_destroyed action="sketchybar --trigger window
 # global settings
 yabai -m config \
 	external_bar main:45:0 \
-	menubar_opacity 0.8 \
+	menubar_opacity 1.0 \
 	mouse_follows_focus off \
 	focus_follows_mouse off \
 	window_origin_display default \
@@ -26,7 +26,7 @@ yabai -m config \
 	window_shadow on \
 	window_animation_duration 0.0 \
 	window_opacity_duration 0.0 \
-	active_window_opacity 0.97 \
+	active_window_opacity 0.98 \
 	normal_window_opacity 0.80 \
 	window_opacity on \
 	insert_feedback_color 0xffd75f5f \
