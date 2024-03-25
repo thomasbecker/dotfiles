@@ -24,6 +24,7 @@ return {
         "groovy-language-server",
         "iferr",
         "impl",
+        "helm-ls",
         "java-language-server",
         "json-lsp",
         "lua-language-server",
