@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = true,
     opts = {
       ensure_installed = {
         "bash",

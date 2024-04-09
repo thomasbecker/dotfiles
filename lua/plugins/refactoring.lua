@@ -7,7 +7,8 @@ return {
       "nvim-treesitter/playground",
     },
     cmd = { "Refactoring" },
-    init = function()
+    lazy = true,
+    config = function()
       require("refactoring").setup({
         prompt_func_return_type = {
           java = true,
