@@ -5,13 +5,14 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
+    lazy = true,
     opts = {
       settings = {
         save_on_toggle = true,
         save_on_change = true,
       },
     },
-    init = function()
+    config = function()
       local harpoon = require("harpoon")
       harpoon:extend({
         UI_CREATE = function(cx)
