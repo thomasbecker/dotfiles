@@ -8,6 +8,7 @@ alias _=sudo
 alias l=eza
 alias g=git
 alias u=up
+alias f=fuck
 
 # mask built-ins with better defaults
 alias vi=nvim
