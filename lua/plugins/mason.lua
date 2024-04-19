@@ -32,6 +32,7 @@ return {
         "lua-language-server",
         "markdownlint",
         "marksman",
+        "omnisharp",
         "prettier",
         "shellcheck",
         "shfmt",
