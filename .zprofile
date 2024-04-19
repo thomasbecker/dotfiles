@@ -12,7 +12,7 @@ fi
 # Editors
 #
 export EDITOR="${EDITOR:-nvim}"
-export VISUAL="${VISUAL:-vim}"
+export VISUAL="${VISUAL:-nvim}"
 export PAGER="${PAGER:-less}"
 
 #
