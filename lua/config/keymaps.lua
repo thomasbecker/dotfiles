@@ -10,6 +10,7 @@ map("n", "<C-u>", "<C-u>zz", { desc = "Move half page up and center cursor" })
 map("n", "o", 'o<ESC>0"_D', { desc = "Insert new line below cursor" })
 map("n", "O", 'O<ESC>0"_D', { desc = "Insert new line above cursor" })
 
+-- Move lines
 map("n", "<C-T-j>", ":m .+<CR>==", { desc = "Move line down" })
 map("n", "<C-T-k>", ":m .-2<CR>==", { desc = "Move line up" })
 map("v", "<C-T-j>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
