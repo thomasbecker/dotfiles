@@ -35,7 +35,7 @@ return {
       {
         "<leader>a",
         function()
-          require("harpoon"):list():Add()
+          require("harpoon"):list():add()
         end,
         silent = true,
         desc = "Add harpoon mark",
