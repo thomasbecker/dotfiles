@@ -35,6 +35,25 @@ autoload -Uz compinit && compinit
 
 antidote load
 
+# Set keybindings for zsh-vi-mode insert mode
+function zvm_after_init() {
+    zvm_bindkey viins "^P" up-line-or-beginning-search
+    zvm_bindkey viins "^N" down-line-or-beginning-search
+    for o in files branches tags remotes hashes stashes each_ref; do
+        eval "zvm_bindkey viins '^g^${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey viins '^g${o[1]}' fzf-git-$o-widget"
+    done
+}
+# Set keybindings for zsh-vi-mode normal and visual modes
+function zvm_after_lazy_keybindings() {
+    for o in files branches tags remotes hashes stashes each_ref; do
+        eval "zvm_bindkey vicmd '^g^${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey vicmd '^g${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey visual '^g^${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey visual '^g${o[1]}' fzf-git-$o-widget"
+    done
+}
+
 # Source zstyles you might use with antidote.
 [[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
 
@@ -63,3 +82,5 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
+
+source ~/.config/fzf-git.sh/fzf-git.sh

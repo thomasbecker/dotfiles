@@ -15,8 +15,15 @@ alias vi=nvim
 
 # more ways to ls
 alias ls='eza'
+# only directories
+alias ld='eza -lD'
+# only files
+alias lf='eza -lf --color=always | grep -v /'
+# hidden files/and dirs only
+alias lh='eza -dl .* --group-directories-first'
+alias lss='eza -alf --color=always --sort=size | grep -v /'
 alias lsoa='eza -la -sold'
-alias ll='eza -la -snew'
+alias ll='eza -la -snew --git --icons=always'
 alias lso='eza -l -sold'
 alias lsn='eza -l -snew'
 
