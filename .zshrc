@@ -84,3 +84,5 @@ _fzf_compgen_dir() {
 }
 
 source ~/.config/fzf-git.sh/fzf-git.sh
+
+export BAT_THEME=Catppuccin-mocha
