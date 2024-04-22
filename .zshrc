@@ -71,9 +71,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
 export FZF_CTRL_T_OPTS="--preview 'rsp {}'"
-# export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :1000 {}'"
 export FZF_ALT_C_OPTS="--preview 'rsp {} | head -200'"
-# export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal

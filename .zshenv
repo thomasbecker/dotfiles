@@ -16,3 +16,4 @@ fi
 
 # load additional host specific environment settings
 source ${ZDOTDIR:-$HOME}/.zshenv_host
+. "$HOME/.cargo/env"
