@@ -65,6 +65,8 @@ eval "$(zoxide init zsh)"
 
 [ -f ~/config/fzf/fzf.zsh ] && source ~/config/fzf/fzf.zsh
 
+# fzf defaults with rsop for preview
+export FZF_DEFAULT_OPTS="--preview 'rsp {}'"
 # -- Use fd instead of fzf --
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
