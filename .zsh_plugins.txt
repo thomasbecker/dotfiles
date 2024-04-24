@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-jeffreytse/zsh-vi-mode
-
 https://github.com/peterhurford/up.zsh
 rummik/zsh-tailf
 #mattmc3/zman
@@ -50,5 +48,7 @@ zsh-users/zsh-completions path:src kind:fpath
 # These popular core plugins should be loaded at the end
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
+
+jeffreytse/zsh-vi-mode
 
 $ZDOTDIR/.aliases
