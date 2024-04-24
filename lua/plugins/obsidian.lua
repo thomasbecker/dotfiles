@@ -20,6 +20,9 @@ return {
         path = "/Users/tbecker/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal",
       },
     },
+    templates = {
+      subdir = "templates",
+    },
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.
       folder = "notes/dailies",
