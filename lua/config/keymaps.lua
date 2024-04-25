@@ -17,3 +17,6 @@ map("v", "<C-T-j>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 map("v", "<C-T-k>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 map("i", "<C-T-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move line down" })
 map("i", "<C-T-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move line up" })
+
+-- Add word to spell list and jump to next misspelled word
+map("n", "zg", "zg]s", { desc = "Add word to spell list and jump to next misspelled word" })
