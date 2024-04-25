@@ -34,6 +34,8 @@ return {
         "marksman",
         "omnisharp",
         "prettier",
+        "pylint",
+        "python-lsp-server",
         "shellcheck",
         "shfmt",
         "sonarlint-language-server",
