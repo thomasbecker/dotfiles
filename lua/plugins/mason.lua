@@ -35,6 +35,7 @@ return {
         "omnisharp",
         "prettier",
         "pylint",
+        "pyright",
         "python-lsp-server",
         "shellcheck",
         "shfmt",
