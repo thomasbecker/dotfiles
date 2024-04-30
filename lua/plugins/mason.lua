@@ -36,7 +36,6 @@ return {
         "prettier",
         "pylint",
         "pyright",
-        "python-lsp-server",
         "shellcheck",
         "shfmt",
         "sonarlint-language-server",
