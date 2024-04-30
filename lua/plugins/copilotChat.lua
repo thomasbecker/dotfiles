@@ -14,10 +14,20 @@ return {
     keys = {
       { "<leader>bco", "<cmd>CopilotChatOpen<cr>", desc = "Open Copilot chat" },
       { "<leader>bct", "<cmd>CopilotChatOpen<cr>", desc = "Toggle Copilot chat" },
-      { "<leader>bce", "<cmd>CopilotChatExplain<cr>", desc = "Copilot explain" },
-      { "<leader>bcf", "<cmd>CopilotChatFix<cr>", desc = "Copilot fix" },
-      { "<leader>bco", "<cmd>CopilotChatOptimize<cr>", desc = "Copilot optimize" },
+      { mode = { "n", "v" }, "<leader>bce", "<cmd>CopilotChatExplain<cr>", desc = "Copilot explain" },
+      { mode = { "n", "v" }, "<leader>bcf", "<cmd>CopilotChatFix<cr>", desc = "Copilot fix" },
+      { mode = { "n", "v" }, "<leader>bco", "<cmd>CopilotChatOptimize<cr>", desc = "Copilot optimize" },
       { "<leader>bcc", "<cmd>CopilotChatCommitStaged<cr>", desc = "Copilot write commit message for staged changes" },
+      {
+        "<leader>bcq",
+        function()
+          local input = vim.fn.input("Quick Chat: ")
+          if input ~= "" then
+            require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+          end
+        end,
+        desc = "Copilot write commit message for staged changes",
+      },
     },
     -- See Commands section for default commands if you want to lazy load on them
   },
