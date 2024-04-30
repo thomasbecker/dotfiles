@@ -31,6 +31,12 @@ return {
         require("gitsigns").preview_hunk,
         { buffer = bufnr, desc = " gitsigns: Preview git hunk" }
       )
+      vim.keymap.set(
+        "n",
+        "<leader>hP",
+        require("gitsigns").preview_hunk_inline,
+        { buffer = bufnr, desc = " gitsigns: Preview git hunk inline" }
+      )
 
       -- don't override the built-in and fugitive keymaps
       local gs = package.loaded.gitsigns
