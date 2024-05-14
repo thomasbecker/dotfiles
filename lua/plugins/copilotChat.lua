@@ -18,7 +18,7 @@ return {
     keys = {
       { "<leader>bco", "<cmd>CopilotChatOpen<cr>", desc = "Open Copilot chat" },
       { "<leader>bct", "<cmd>CopilotChatOpen<cr>", desc = "Toggle Copilot chat" },
-      { mode = { "n", "v" }, "<leader>bce", "<cmd>CopilotlhatExplain<cr>", desc = "lopilot explain" },
+      { mode = { "n", "v" }, "<leader>bce", "<cmd>CopilotChatExplain<cr>", desc = "lopilot explain" },
       { mode = { "n", "v" }, "<leader>bcf", "<cmd>CopilotChatFix<cr>", desc = "Copilot fix" },
       { mode = { "n", "v" }, "<leader>bco", "<cmd>CopilotChatOptimize<cr>", desc = "Copilot optimize" },
       { "<leader>bcc", "<cmd>CopilotChatCommitStaged<cr>", desc = "Copilot write commit message for staged changes" },
