@@ -7,8 +7,8 @@ local map = Util.safe_keymap_set
 map("n", "<C-d>", "<C-d>zz", { desc = "Move half page down and center cursor" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Move half page up and center cursor" })
 
-map("n", "o", 'o<ESC>0"_D', { desc = "Insert new line below cursor" })
-map("n", "O", 'O<ESC>0"_D', { desc = "Insert new line above cursor" })
+map("n", "o", 'o<ESC>0"_Di', { desc = "Insert new line below cursor" })
+map("n", "O", 'O<ESC>0"_Di', { desc = "Insert new line above cursor" })
 
 -- Move lines - Weird thing is it works witn A-T-j ... figure out why
 map("n", "<C-T-j>", ":m .+<CR>==", { desc = "Move line down" })
