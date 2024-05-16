@@ -49,6 +49,9 @@ return {
       end
       return tostring(os.time()) .. "-" .. suffix
     end,
+    follow_url_func = function(url)
+      vim.fn.jobstart({ "open", url })
+    end,
   },
   keys = {
     { mode = { "n" }, "<leader>on", "<cmd>ObsidianNew<cr>", desc = "Obsidian new" },
