@@ -2,7 +2,6 @@ return {
   {
     "mfussenegger/nvim-jdtls",
     opts = function(_, opts)
-      local jdtls = require("jdtls")
       local home = os.getenv("HOME")
       local path_to_mason = os.getenv("MASON")
       local path_to_mason_packages = path_to_mason .. "/packages"
@@ -85,12 +84,13 @@ return {
             },
             completion = {
               favoriteStaticMembers = {
-                "org.hamcrest.MatcherAssert.assertThat",
-                "org.hamcrest.Matchers.*",
-                "org.hamcrest.CoreMatchers.*",
-                "org.junit.jupiter.api.Assertions.*",
                 "java.util.Objects.requireNonNull",
                 "java.util.Objects.requireNonNullElse",
+                "org.assertj.core.api.Assertions.*",
+                "org.hamcrest.CoreMatchers.*",
+                "org.hamcrest.MatcherAssert.assertThat",
+                "org.hamcrest.Matchers.*",
+                "org.junit.jupiter.api.Assertions.*",
                 "org.mockito.Mockito.*",
               },
               filteredTypes = {
@@ -101,11 +101,11 @@ return {
                 "sun.*",
               },
               importOrder = {
+                "com",
                 "java",
                 "javax",
-                "com",
-                "org",
                 "lombok",
+                "org",
               },
             },
             sources = {
