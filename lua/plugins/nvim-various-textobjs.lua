@@ -2,6 +2,7 @@ return {
   {
     "chrisgrieser/nvim-various-textobjs",
     lazy = false,
+    enabled = false,
     opts = {
       useDefaultKeymaps = true,
       disabledKeymaps = { "n" },
