@@ -1,6 +1,7 @@
 return {
   {
     "ThePrimeagen/refactoring.nvim",
+    enabled = false,
     opts = {
       prompt_func_return_type = {
         java = true,
