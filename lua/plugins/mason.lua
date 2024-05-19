@@ -27,7 +27,7 @@ return {
         "helm-ls",
         "iferr",
         "impl",
-        "java-language-server",
+        "jdtls",
         "json-lsp",
         "lua-language-server",
         "markdownlint",
