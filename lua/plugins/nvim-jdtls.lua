@@ -18,16 +18,15 @@ return {
         "-Dlog.protocol=true",
         "-Dlog.level=ALL",
         "-Xmx4g",
+        "-parameters",
         "-javaagent:" .. lombok_path,
         "--add-modules=ALL-SYSTEM",
         "--add-opens",
         "java.base/java.util=ALL-UNNAMED",
         "--add-opens",
         "java.base/java.lang=ALL-UNNAMED",
-
         "-jar",
         path_to_jar,
-
         "-configuration",
         path_to_config,
       }
@@ -37,7 +36,7 @@ return {
         local root_dir = jdtls_setup.find_root(root_markers)
         local project_name = vim.fn.fnamemodify(root_dir, ":p:h:t")
         local cmd = vim.deepcopy(full_cmd_opts.cmd)
-        local workspace_dir = home .. "/.cache/jdtls/workspace" .. project_name
+        local workspace_dir = home .. "/.cache/jdtls/workspace-" .. project_name
         if project_name then
           vim.list_extend(cmd, {
             -- "-configuration",
@@ -69,6 +68,7 @@ return {
               enabled = true,
               settings = {
                 url = vim.fn.stdpath("config") .. "/lang_server/palantir_java_format.xml",
+                -- url = vim.fn.stdpath("config") .. "/lang_server/intellij-java-style.xml",
               },
             },
             eclipse = {
