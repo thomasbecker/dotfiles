@@ -23,7 +23,6 @@
     "lazyvim.plugins.extras.linting.eslint",
     "lazyvim.plugins.extras.lsp.none-ls",
     "lazyvim.plugins.extras.test.core",
-    "lazyvim.plugins.extras.ui.alpha",
     "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.ui.mini-animate",
     "lazyvim.plugins.extras.ui.mini-indentscope",
@@ -33,5 +32,5 @@
   "news": {
     "NEWS.md": "4964"
   },
-  "version": 4
+  "version": 5
 }
