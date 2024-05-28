@@ -3,6 +3,8 @@
 
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 
+source ${ZDOTDIR}/.history
+
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -18,7 +20,7 @@ setopt extended_glob
 MAGIC_ENTER_OTHER_COMMAND='ll'
 
 # prepare antidote
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 
 # set omz variables prior to loading omz plugins
 ZSH=$(antidote path ohmyzsh/ohmyzsh)
