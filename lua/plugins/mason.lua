@@ -6,7 +6,6 @@ return {
         "bash-language-server",
         "beautysh",
         "checkstyle",
-        "csharp-language-server",
         "csharpier",
         "delve",
         "docker-compose-language-service",
