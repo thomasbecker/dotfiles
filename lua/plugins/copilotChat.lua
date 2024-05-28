@@ -30,7 +30,7 @@ return {
             require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
           end
         end,
-        desc = "Copilot write commit message for staged changes",
+        desc = "Copilot quick chat with current buffer",
       },
     },
     -- See Commands section for default commands if you want to lazy load on them
