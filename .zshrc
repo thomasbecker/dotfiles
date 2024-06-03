@@ -69,7 +69,7 @@ eval "$(zoxide init zsh)"
 [ -f ~/config/fzf/fzf.zsh ] && source ~/config/fzf/fzf.zsh
 
 # fzf defaults with rsop for preview
-export FZF_DEFAULT_OPTS="--preview 'rsp {}'"
+export FZF_DEFAULT_OPTS="--bind 'ctrl-/:toggle-preview' --preview 'rsp {}'"
 # -- Use fd instead of fzf --
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -77,6 +77,14 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 
 export FZF_CTRL_T_OPTS="--preview 'rsp {}'"
 export FZF_ALT_C_OPTS="--preview 'rsp {} | head -200'"
+
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
 
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
