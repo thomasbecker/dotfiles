@@ -4,6 +4,7 @@
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 
 source ${ZDOTDIR}/.history
+source ${ZDOTDIR}/.dotnet
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
