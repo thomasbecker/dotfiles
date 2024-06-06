@@ -3,6 +3,29 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     lazy = true,
+    config = function(_)
+      require("telescope").load_extension("rest")
+      require("telescope").extensions.rest.select_env()
+    end,
+    -- change some options
+    opts = {
+      defaults = {
+        layout_strategy = "horizontal",
+        layout_config = { prompt_position = "top" },
+        sorting_strategy = "ascending",
+        winblend = 0,
+        file_ignore_patterns = { "node_modules", ".git", "%.class" },
+        vimgrep_arguments = {
+          "rg",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+          "--hidden",
+        },
+      },
+    },
     keys = {
       -- add a keymap to browse plugin files
       -- stylua: ignore
@@ -19,37 +42,6 @@ return {
         end,
         desc = "Find Zsh Files",
       },
-    },
-    -- change some options
-    opts = {
-      defaults = {
-        layout_strategy = "horizontal",
-        layout_config = { prompt_position = "top" },
-        sorting_strategy = "ascending",
-        winblend = 0,
-        file_ignore_patterns = { "node_modules", "%.class" },
-        vimgrep_arguments = {
-          "rg",
-          "--no-heading",
-          "--with-filename",
-          "--line-number",
-          "--column",
-          "--smart-case",
-          "--hidden",
-        },
-      },
-    },
-  },
-
-  -- add telescope-fzf-native
-  {
-    "telescope.nvim",
-    dependencies = {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
     },
   },
 }
