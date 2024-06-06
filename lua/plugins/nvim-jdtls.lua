@@ -18,7 +18,6 @@ return {
         "-Dlog.protocol=true",
         "-Dlog.level=ALL",
         "-Xmx4g",
-        "-parameters",
         "-javaagent:" .. lombok_path,
         "--add-modules=ALL-SYSTEM",
         "--add-opens",
