@@ -4,8 +4,9 @@ return {
     "nvim-telescope/telescope.nvim",
     lazy = true,
     config = function(_)
-      require("telescope").load_extension("rest")
-      require("telescope").extensions.rest.select_env()
+      LazyVim.on_load("telescope.nvim", function()
+        require("telescope").load_extension("rest")
+      end)
     end,
     -- change some options
     opts = {

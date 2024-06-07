@@ -15,8 +15,9 @@ return {
       require("rest-nvim").setup()
     end,
     keys = {
-      { mode = { "n", "v" }, "<leader>rr", "<cmd>Rest run<cr>", desc = "Rest run" },
-      { mode = { "n", "v" }, "<leader>rl", "<cmd>Rest run last<cr>", desc = "Re-run last request" },
+      { mode = { "n", "v" }, "<leader>rr", "<cmd>Rest run<cr>", desc = "Rest: run" },
+      { mode = { "n", "v" }, "<leader>rl", "<cmd>Rest run last<cr>", desc = "Rest: Re-run last request" },
+      { mode = { "n", "v" }, "<leader>re", "<cmd>Telescope rest select_env<cr>", desc = "Rest: Select env file" },
     },
   },
 }
