@@ -382,18 +382,18 @@
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local       meta='%248F'  # grey foreground
-      local      clean='%119F'   # green foreground
-      local   modified='%178F'  # yellow foreground
-      local  untracked='%39F'   # blue foreground
-      local conflicted='%196F'  # red foreground
+      local       meta='%F{#cdd6f4}'  # grey foreground
+      local      clean='%F{#a6e3a1}'   # green foreground
+      local   modified='%F{#f9e2af}'  # yellow foreground
+      local  untracked='%F{#89dceb}'   # blue foreground
+      local conflicted='%F{#f38ba8}'  # red foreground
     else
       # Styling for incomplete and stale Git status.
-      local       meta='%244F'  # grey foreground
-      local      clean='%244F'  # grey foreground
-      local   modified='%244F'  # grey foreground
-      local  untracked='%244F'  # grey foreground
-      local conflicted='%244F'  # grey foreground
+      local       meta='%F{#cdd6f4}'  # grey foreground
+      local      clean='%F{#cdd6f4}'  # grey foreground
+      local   modified='%F{#cdd6f4}'  # grey foreground
+      local  untracked='%F{#cdd6f4}'  # grey foreground
+      local conflicted='%F{#cdd6f4}'  # grey foreground
     fi
 
     local res
@@ -517,6 +517,11 @@
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=#a6e3a1
   typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=178
 
+  # typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=#313244 
+  # typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=#450719
+  # typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=#313244 
+  # typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=#450719
+  # typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=#11111b 
   ##########################[ status: exit code of the last command ]###########################
   # Enable OK_PIPE, ERROR_PIPE and ERROR_SIGNAL status states to allow us to enable, disable and
   # style them independently from the regular OK and ERROR state.
