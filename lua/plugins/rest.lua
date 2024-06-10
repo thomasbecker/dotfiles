@@ -13,6 +13,7 @@ return {
     dependencies = { "luarocks.nvim" },
     config = function()
       require("rest-nvim").setup()
+      require("telescope").load_extension("rest")
     end,
     keys = {
       { mode = { "n", "v" }, "<leader>rr", "<cmd>Rest run<cr>", desc = "Rest: run" },

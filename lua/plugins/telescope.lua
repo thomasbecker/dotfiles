@@ -3,11 +3,6 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     lazy = true,
-    config = function(_)
-      LazyVim.on_load("telescope.nvim", function()
-        require("telescope").load_extension("rest")
-      end)
-    end,
     -- change some options
     opts = {
       defaults = {
