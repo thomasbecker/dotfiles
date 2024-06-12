@@ -21,7 +21,7 @@ return {
       },
     },
     keys = {
-      { mode = { "n" }, "<leader>oi", "<cmd>Oil<cr>", desc = "Open parent directory" },
+      { mode = { "n" }, "<leader>oi", "<cmd>Oil --float<cr>", desc = "Open parent directory" },
     },
   },
 }
