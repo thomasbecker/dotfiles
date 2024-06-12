@@ -17,7 +17,7 @@ return {
         -- "mtime",
       },
       view_options = {
-        show_hidden = false,
+        show_hidden = true,
       },
     },
     keys = {
