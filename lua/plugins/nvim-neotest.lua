@@ -1,8 +1,14 @@
 return {
   {
     "nvim-neotest/neotest",
-    dependencies = {
-      "Issafalcon/neotest-dotnet",
+    keys = {
+      {
+        "<leader>tc",
+        function()
+          require("neotest").output_panel.clear()
+        end,
+        desc = "Clear output panel",
+      },
     },
   },
 }
