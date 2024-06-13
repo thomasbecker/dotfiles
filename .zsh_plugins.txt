@@ -5,7 +5,7 @@ rummik/zsh-tailf
 #mattmc3/zman
 #agkozak/zsh-z
 
-#romkatv/powerlevel10k
+romkatv/powerlevel10k
 Aloxaf/fzf-tab
 
 belak/zsh-utils path:completion

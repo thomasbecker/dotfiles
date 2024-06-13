@@ -6,9 +6,9 @@ export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 source ${ZDOTDIR}/.history
 source ${ZDOTDIR}/.dotnet
@@ -37,25 +37,6 @@ autoload -Uz $fpath[1]/*(.:t)
 autoload -Uz compinit && compinit
 
 antidote load
-
-# Set keybindings for zsh-vi-mode insert mode
-function zvm_after_init() {
-    zvm_bindkey viins "^P" up-line-or-beginning-search
-    zvm_bindkey viins "^N" down-line-or-beginning-search
-    for o in files branches tags remotes hashes stashes each_ref; do
-        eval "zvm_bindkey viins '^g^${o[1]}' fzf-git-$o-widget"
-        eval "zvm_bindkey viins '^g${o[1]}' fzf-git-$o-widget"
-    done
-}
-# Set keybindings for zsh-vi-mode normal and visual modes
-function zvm_after_lazy_keybindings() {
-    for o in files branches tags remotes hashes stashes each_ref; do
-        eval "zvm_bindkey vicmd '^g^${o[1]}' fzf-git-$o-widget"
-        eval "zvm_bindkey vicmd '^g${o[1]}' fzf-git-$o-widget"
-        eval "zvm_bindkey visual '^g^${o[1]}' fzf-git-$o-widget"
-        eval "zvm_bindkey visual '^g${o[1]}' fzf-git-$o-widget"
-    done
-}
 
 # Source zstyles you might use with antidote.
 [[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
@@ -102,13 +83,13 @@ export BAT_THEME=Catppuccin-mocha
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-# [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  export POWERLEVEL9K_TRANSIENT_PROMPT=always
-  # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/catppuccin_mocha.omp.json)"
-  eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/my-posh-settings.toml)"
-fi
+# if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#   export POWERLEVEL9K_TRANSIENT_PROMPT=always
+#   # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/catppuccin_mocha.omp.json)"
+#   eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/my-posh-settings.toml)"
+# fi
 
 # disable kubectl segment by default
-oh-my-posh toggle kubectl
+# oh-my-posh toggle kubectl

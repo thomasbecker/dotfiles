@@ -29,8 +29,7 @@ zstyle ':fzf-tab:complete:(*):*' fzf-preview 'rsp $realpath'
 zstyle ':fzf-tab:complete:unset:*' fzf-preview 'echo ${(P)word}'
 zstyle ':fzf-tab:complete:export:*' fzf-preview 'echo ${(P)word}'
 # FIXME: does not preview the value for some reason
-# zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' \
-# 	fzf-preview 'echo '$'$word'
+zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand|echo):*' fzf-preview 'echo '$'$word'
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
 # homebrew
