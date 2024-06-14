@@ -42,9 +42,10 @@
 
   local text='#cdd6f4'
   local green='#a6e3a1'
-  local peach='#fab387'
-  local maroon='#eba0ac'
   local red='#f38ba8'
+  local peach='#fab387'
+  local yellow='#f9e2af'
+  local maroon='#eba0ac'
   local mauve='#cba6f7'
   local sky='#89dceb'
   local subtext1='#bac2de'
@@ -564,7 +565,7 @@
   # Show this many fractional digits. Zero means round to seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
   # Execution time color.
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=101
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
   # Duration format: 1d 2h 3m 4s.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
   # Custom icon.
@@ -811,8 +812,8 @@
 
   ##################################[ disk_usage: disk usage ]##################################
   # Colors for different levels of disk usage.
-  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_FOREGROUND=35
-  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_FOREGROUND=220
+  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_FOREGROUND=$green
+  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_FOREGROUND=$peach
   typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_FOREGROUND=$red
   # Thresholds for different levels of disk usage (percentage points).
   typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_LEVEL=90
