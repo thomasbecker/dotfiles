@@ -64,4 +64,6 @@ alias "?git"="gh copilot suggest -t git"
 alias "?gh"="gh copilot suggest -t gh"
 alias gce="gh copilot explain"
 
-source ~/.config/zsh/.aliases_host
+if[[ -f ~/.config/zsh/.aliases_host ]]; then
+    source ~/.config/zsh/.aliases_host
+fi
