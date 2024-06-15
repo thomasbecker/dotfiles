@@ -11,9 +11,23 @@ return {
         },
       },
       window = {
-        width = 0.7, -- fractional width of parent, or absolute width in columns when > 1
+        width = 0.6,
       },
     },
+
+    --   local chat = require("CopilotChat")
+    --   require("CopilotChat.integrations.cmp").setup()
+    --
+    --   vim.api.nvim_create_autocmd("BufEnter", {
+    --     pattern = "copilot-chat",
+    --     callback = function()
+    --       vim.opt_local.relativenumber = true
+    --       vim.opt_local.number = false
+    --     end,
+    --   })
+    --   chat.setup(opts)
+    -- end,
+
     keys = {
       { mode = { "n", "v" }, "<leader>ae", "<cmd>CopilotChatExplain<cr>", desc = "Copilot explain" },
       { mode = { "n", "v" }, "<leader>af", "<cmd>CopilotChatFix<cr>", desc = "Copilot fix" },
