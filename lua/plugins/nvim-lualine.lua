@@ -1,6 +1,6 @@
 local colors = require("../config/colors")
 
-local catppuccin = {
+local catppuccin_mocha = {
   normal = {
     a = { bg = colors.mauve, fg = colors.surface0, gui = "bold" },
     b = { bg = colors.surface1, fg = colors.mauve },
@@ -32,12 +32,13 @@ local catppuccin = {
     c = { bg = colors.surface0, fg = colors.text },
   },
 }
+
 return {
   {
     "nvim-lualine/lualine.nvim",
     opts = {
       options = {
-        theme = catppuccin,
+        theme = catppuccin_mocha,
       },
       sections = {
         lualine_x = {
