@@ -48,6 +48,7 @@ alias dpsa='docker ps -a'
 alias drmfa='docker rm -f $(docker ps -a -q)'
 
 # misc
+alias lg=lazygit
 alias please=sudo
 alias zshrc='${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc'
 alias zbench='for i in {1..10}; do /usr/bin/time zsh -lic exit; done'
