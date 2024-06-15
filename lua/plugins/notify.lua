@@ -2,7 +2,7 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 10000,
+      timeout = 4000,
       background_colour = "#000000",
     },
   },
