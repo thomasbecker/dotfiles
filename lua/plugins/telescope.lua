@@ -26,8 +26,15 @@ return {
       -- add a keymap to browse plugin files
       -- stylua: ignore
       {
+        "<leader>fs",
+        function() require("telescope.builtin").find_files({ cwd = "~/.dotfiles", hidden = true}) end,
+        desc = "Find dotfiles",
+      },
+      {
         "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+        function()
+          require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
+        end,
         desc = "Find Plugin File",
       },
       -- add a keymap to browse zsh files
