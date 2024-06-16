@@ -1,0 +1,7 @@
+zvm_bindkey viins "^P" up-line-or-beginning-search
+zvm_bindkey viins "^N" down-line-or-beginning-search
+for o in files branches tags remotes hashes stashes each_ref; do
+    eval "zvm_bindkey viins '^g^${o[1]}' fzf-git-$o-widget"
+    eval "zvm_bindkey viins '^g${o[1]}' fzf-git-$o-widget"
+done
+

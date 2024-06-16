@@ -1,0 +1,54 @@
+#!/bin/zsh
+
+https://github.com/peterhurford/up.zsh
+rummik/zsh-tailf
+#mattmc3/zman
+#agkozak/zsh-z
+
+romkatv/powerlevel10k
+Aloxaf/fzf-tab
+
+belak/zsh-utils path:completion
+
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/brew
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/compleat
+ohmyzsh/ohmyzsh path:plugins/copybuffer
+ohmyzsh/ohmyzsh path:plugins/copyfile
+ohmyzsh/ohmyzsh path:plugins/copypath
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/docker-compose
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
+ohmyzsh/ohmyzsh path:plugins/fzf
+ohmyzsh/ohmyzsh path:plugins/gh
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/kubectl
+ohmyzsh/ohmyzsh path:plugins/magic-enter
+ohmyzsh/ohmyzsh path:plugins/thefuck
+
+zsh-users/zsh-syntax-highlighting
+
+### Completions
+#
+# You may want to add some additional completions to Zsh. Completions look in your fpath
+# for completion functions, which are functions named with a leading underscore
+# (eg: _git). You need to add all supplemental completions to your fpath prior to
+# running `compinit` to use completions functionality properly. You will want to find
+# a completion plugin that runs `compinit` for you, or you can run it yourself in
+# your .zshrc after antidote loads like this:
+#
+#   autoload -Uz compinit && compinit
+#
+###
+
+zsh-users/zsh-completions path:src kind:fpath
+
+# These popular core plugins should be loaded at the end
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions
+
+jeffreytse/zsh-vi-mode
+
+$ZDOTDIR/.aliases
