@@ -1,0 +1,6 @@
+for o in files branches tags remotes hashes stashes each_ref; do
+        eval "zvm_bindkey vicmd '^g^${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey vicmd '^g${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey visual '^g^${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey visual '^g${o[1]}' fzf-git-$o-widget"
+done

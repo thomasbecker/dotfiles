@@ -1,0 +1,20 @@
+### .gitignore
+
+.antidote/
+.zcompcache/
+.zsh_sessions/
+.zcompdump*
+.zsh_history
+.zsh_plugins.zsh
+*.bak
+*.local
+*.local.zsh
+*.zwc
+*.zwc.old
+~*
+
+.iterm2
+.iterm2_shell_integration.zsh
+
+.aliases_host
+.zshenv_host
