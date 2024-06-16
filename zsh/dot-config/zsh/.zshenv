@@ -15,5 +15,8 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 fi
 
 # load additional host specific environment settings
-source ${ZDOTDIR:-$HOME}/.zshenv_host
+if [[ -s ${ZDOTDIR:-$HOME}/.zshenv_host ]]; then
+  source ${ZDOTDIR:-$HOME}/.zshenv_host
+fi
+
 . "$HOME/.cargo/env"
