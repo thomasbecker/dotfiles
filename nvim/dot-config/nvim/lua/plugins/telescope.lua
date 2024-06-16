@@ -23,11 +23,11 @@ return {
       },
     },
     keys = {
-      -- add a keymap to browse plugin files
-      -- stylua: ignore
       {
         "<leader>fs",
-        function() require("telescope.builtin").find_files({ cwd = "~/.dotfiles", hidden = true}) end,
+        function()
+          require("telescope.builtin").find_files({ cwd = "~/.dotfiles", hidden = true })
+        end,
         desc = "Find dotfiles",
       },
       {
@@ -37,7 +37,6 @@ return {
         end,
         desc = "Find Plugin File",
       },
-      -- add a keymap to browse zsh files
       {
         "<leader>fz",
         function()
