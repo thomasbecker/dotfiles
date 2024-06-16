@@ -1,4 +1,4 @@
-local colors = require("../config/colors")
+local colors = dofile(os.getenv("HOME") .. "/.config/themes/colors.lua")
 
 local catppuccin_mocha = {
   normal = {
