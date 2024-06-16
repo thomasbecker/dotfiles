@@ -1,0 +1,165 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'os'
+    style = 'plain'
+    foreground = 'p:blue'
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'plain'
+    background = 'transparent'
+    foreground = 'p:blue'
+    template = '{{ .Path }}'
+
+    [blocks.segments.properties]
+      style = 'full'
+      max_depth = 6
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'plain'
+    foreground = 'p:text'
+    background = 'transparent'
+#template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    template = ' {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}'
+
+    [blocks.segments.properties]
+      branch_icon = ''
+      commit_icon = '@'
+      fetch_status = true
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:base'
+    background = 'p:peach'
+    template = '{{ .FormattedMs }}'
+
+    [blocks.segments.properties]
+      threshold = 5000
+
+  [[blocks.segments]]
+    type = 'java'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:text'
+    background = 'p:java'
+    template = '  java {{ .Full }}'
+
+
+  [[blocks.segments]]
+    type = 'go'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:text'
+    background = '#6CA35E'
+    template = '  go {{ .Full }}'
+
+  [[blocks.segments]]
+    type = 'dotnet'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:text'
+    background = 'p:dotnet'
+    template = '  {{ .Full }} '
+
+  [[blocks.segments]]
+    type = 'angular'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:text'
+    background = 'p:angular'
+    template = "  {{ .Full }} "
+
+  [[blocks.segments]]
+    type = 'react'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:base'
+    background = 'p:react'
+    template = '  {{ .Full }} '
+
+  [[blocks.segments]]
+    type = 'lua'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:text'
+    background = 'p:lua'
+    template = '  {{ .Full }} '
+
+  [[blocks.segments]]
+    type = 'node'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:text'
+    background = 'p:node'
+    template = '  {{ .Full }} '
+
+  [[blocks.segments]]
+    type = 'kubectl'
+    style = "powerline"
+    powerline_symbol = ""
+    foreground = "p:text"
+    background = "p:kubernetes"
+    template = " ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{else}}default{{end}} "
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    foreground_templates = [
+      '{{if gt .Code 0}}p:red{{end}}',
+      '{{if eq .Code 0}}p:green{{end}}',
+    ]
+    background = 'transparent'
+    template = '❯'
+
+[transient_prompt]
+  foreground_templates = [
+    '{{if gt .Code 0}}p:red{{end}}',
+    '{{if eq .Code 0}}p:green{{end}}',
+  ]
+  background = 'transparent'
+  template = '❯ '
+
+[secondary_prompt]
+  foreground = 'p:green'
+  background = 'transparent'
+  template = '❯❯ '
+
+[palette]
+  red = '#f38ba8'
+  green = '#a6e3a1'
+  blue = '#89b4fa'
+  peach = '#fab387'
+  yellow = '#f9e2af'
+  teal = '#94e2d5'
+  text = '#cdd6f4'
+  base = '#1e1e2e'
+  java = '#007396'
+  go = '#00ADD8'
+  react = '#61DAFB'
+  node = '#339933'
+  dotnet = '#512BD4'
+  angular = '#DD0031'
+  lua = '#000080'
+  kubernetes = '#326CE5'
