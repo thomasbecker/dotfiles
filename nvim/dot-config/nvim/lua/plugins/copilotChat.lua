@@ -4,14 +4,12 @@ return {
     lazy = true,
     opts = {
       debug = false, -- Enable debugging
+      auto_insert_mode = false,
       mappings = {
         reset = {
           normal = "C-x",
           insert = "C-x",
         },
-      },
-      window = {
-        width = 0.6,
       },
     },
 
