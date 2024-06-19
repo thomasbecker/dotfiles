@@ -32,7 +32,6 @@ return {
         "lua-language-server",
         "markdownlint",
         "marksman",
-        "prettier",
         "pylint",
         "pyright",
         "shellcheck",
