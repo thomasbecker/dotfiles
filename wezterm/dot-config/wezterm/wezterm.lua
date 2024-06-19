@@ -27,21 +27,26 @@ config.scrollback_lines = 25000
 config.window_decorations = "RESIZE"
 config.window_frame = {
 	font = wezterm.font({ family = font, weight = "Bold" }),
-	font_size = 12.0,
+	font_size = 11.0,
 	active_titlebar_bg = colors.mantle,
 	inactive_titlebar_bg = colors.mantle,
 }
-
+config.window_padding = {
+	left = "2px",
+	right = "2px",
+	top = "2px",
+	bottom = "2px",
+}
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.inactive_pane_hsb = {
 	saturation = 0.8,
-	brightness = 0.6,
+	brightness = 0.5,
 }
 
 config.colors = {
-	cursor_bg = "#52ad70",
-	cursor_fg = "black",
+	cursor_bg = colors.green,
+	cursor_fg = colors.mantle,
 }
 
 keys.apply_to_config(config)

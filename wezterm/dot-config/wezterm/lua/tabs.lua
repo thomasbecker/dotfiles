@@ -13,7 +13,7 @@ M.apply_to_config = function(config)
 	local active_tab_fg_color = colors.surface0
 	local inactive_tab_bg_color = colors.surface2
 	local inactive_tab_text_color = colors.text
-	function tab_title(tab_info)
+	function Tab_title(tab_info)
 		local title = tab_info.tab_title
 		-- if the tab title is explicitly set, take that
 		if title and #title > 0 then
@@ -25,7 +25,7 @@ M.apply_to_config = function(config)
 	end
 
 	wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-		local title = tab_title(tab)
+		local title = Tab_title(tab)
 		title = wezterm.truncate_right(title, max_width - 2)
 		local main_bg_color = colors.mantle
 		local background = colors.mantle
