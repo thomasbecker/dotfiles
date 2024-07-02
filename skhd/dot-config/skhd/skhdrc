@@ -21,7 +21,7 @@ ctrl + alt - f : yabai -m window --toggle zoom-fullscreen ; sketchybar --trigger
 alt - f : yabai -m window --toggle zoom-parent; sketchybar --trigger window_focus
 
 # toggle window split type
-alt - e : yabai -m window --toggle split
+alt - x : yabai -m window --toggle split
 
 # balance out window tree (equalize window splits)
 shift + alt - e : yabai -m space --balance
