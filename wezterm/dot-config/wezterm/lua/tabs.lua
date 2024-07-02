@@ -10,8 +10,8 @@ M.apply_to_config = function(config)
 	local LEFT_END = utf8.char(0xE0B6)
 	local RIGHT_END = utf8.char(0xE0B4)
 	local active_tab_bg_color = colors.sky
-	local active_tab_fg_color = colors.surface0
-	local inactive_tab_bg_color = colors.surface2
+	local active_tab_fg_color = colors.mantle
+	local inactive_tab_bg_color = colors.surface0
 	local inactive_tab_text_color = colors.text
 	function Tab_title(tab_info)
 		local title = tab_info.tab_title
