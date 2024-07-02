@@ -2,7 +2,6 @@ return {
   {
     "chrisgrieser/nvim-various-textobjs",
     lazy = false,
-    enabled = false,
     opts = {
       useDefaultKeymaps = true,
       disabledKeymaps = { "n" },
@@ -10,7 +9,7 @@ return {
     keys = {
       {
         mode = { "o", "x" },
-        "ie",
+        "iE",
         "<cmd>lua require('various-textobjs').nearEoL('inner','inner')<CR>",
         desc = "Near end of line",
       },
