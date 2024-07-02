@@ -32,10 +32,10 @@ config.window_frame = {
 	inactive_titlebar_bg = colors.mantle,
 }
 config.window_padding = {
-	left = "2px",
-	right = "2px",
-	top = "2px",
-	bottom = "2px",
+	left = 10,
+	right = 10,
+	top = 10,
+	bottom = 1,
 }
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
