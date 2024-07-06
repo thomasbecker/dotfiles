@@ -17,8 +17,7 @@ local vpn = sbar.add("item", "widgets.vpn", {
 })
 
 vpn:subscribe({ "routine", "power_source_change", "system_woke" }, function()
-	local success, exit_code, exit_type = os.execute("ifconfig -a | grep 172 > /dev/null")
-	print("exit code: " .. exit_type)
+	local _, _, exit_type = os.execute("ifconfig -a | grep 172 > /dev/null")
 	if exit_type == 1 then
 		vpn:set({
 			drawing = "off",
