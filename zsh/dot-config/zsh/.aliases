@@ -46,6 +46,7 @@ alias d='docker'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias drmfa='docker rm -f $(docker ps -a -q)'
+alias deti='docker exec -it'
 
 # misc
 alias lg=lazygit
