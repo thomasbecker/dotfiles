@@ -45,10 +45,11 @@ alias urlencode='python3 -c "import sys, urllib.parse as ul; \
 alias d='docker'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
+alias drmf='docker rm -f'
 alias drmfa='docker rm -f $(docker ps -a -q)'
-alias deti='docker exec -it'
 
 # misc
+alias ks=k9s
 alias lg=lazygit
 alias please=sudo
 alias zshrc='${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc'
