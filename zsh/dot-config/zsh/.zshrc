@@ -44,7 +44,8 @@ antidote load
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 
-[ -f ~/config/fzf/fzf.zsh ] && source ~/config/fzf/fzf.zsh
+source <(fzf --zsh)
+# [ -f ~/config/fzf/fzf.zsh ] && source ~/config/fzf/fzf.zsh
 
 # fzf defaults with rsop for preview
 export FZF_DEFAULT_OPTS="--bind 'ctrl-/:toggle-preview' --preview 'rsp {}'"
