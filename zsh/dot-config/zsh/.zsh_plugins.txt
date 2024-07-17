@@ -4,6 +4,7 @@ https://github.com/peterhurford/up.zsh
 rummik/zsh-tailf
 #mattmc3/zman
 #agkozak/zsh-z
+atuinsh/atuin
 
 romkatv/powerlevel10k
 Aloxaf/fzf-tab
