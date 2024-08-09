@@ -3,8 +3,10 @@ return {
     "nvim-neotest/neotest",
     dependencies = {
       "nvim-neotest/neotest-jest",
+      "rcasia/neotest-java",
     },
     opts = {
+      -- log_level = "DEBUG",
       adapters = {
         ["neotest-jest"] = {
           jestCommand = "npm test --",
@@ -14,6 +16,7 @@ return {
             return vim.fn.getcwd()
           end,
         },
+        ["neotest-java"] = {},
       },
     },
     keys = {
