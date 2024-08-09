@@ -3,7 +3,6 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     lazy = true,
-    -- change some options
     opts = {
       defaults = {
         layout_strategy = "horizontal",
