@@ -34,6 +34,7 @@ return {
         "marksman",
         "pylint",
         "pyright",
+        "ruby-lsp",
         "shellcheck",
         "shfmt",
         "sonarlint-language-server",
