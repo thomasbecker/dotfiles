@@ -7,8 +7,8 @@ return {
       auto_insert_mode = false,
       mappings = {
         reset = {
-          normal = "C-x",
-          insert = "C-x",
+          normal = "C-c",
+          insert = "C-c",
         },
       },
     },
