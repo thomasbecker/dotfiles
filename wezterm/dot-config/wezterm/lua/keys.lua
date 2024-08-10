@@ -7,6 +7,26 @@ M.apply_to_config = function(config)
 	config.keys = {
 		{ key = "0", mods = "CTRL", action = act.PaneSelect },
 		{ key = "PageUp", mods = "SHIFT", action = act.ScrollByPage(-0.75) },
+		{
+			key = "h",
+			mods = "CTRL|SHIFT",
+			action = act.ActivatePaneDirection("Left"),
+		},
+		{
+			key = "j",
+			mods = "CTRL|SHIFT",
+			action = act.ActivatePaneDirection("Down"),
+		},
+		{
+			key = "k",
+			mods = "CTRL|SHIFT",
+			action = act.ActivatePaneDirection("Up"),
+		},
+		{
+			key = "l",
+			mods = "CTRL|SHIFT",
+			action = act.ActivatePaneDirection("Right"),
+		},
 		{ key = "PageDown", mods = "SHIFT", action = act.ScrollByPage(0.75) },
 		{
 			key = "d",
