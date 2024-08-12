@@ -9,8 +9,8 @@ local os_name = package.config:sub(1, 1) == "\\" and "windows" or "unix"
 if os_name == "windows" then
 	config.default_domain = "WSL:rancher-desktop"
 	-- on mac yabai adds the transparency
-	config.window_background_opacity = 0.95
 end
+config.window_background_opacity = 0.95
 
 wezterm.on("gui-startup", function()
 	local tab, pane, window = mux.spawn_window({})
