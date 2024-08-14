@@ -121,25 +121,6 @@ local spaces_indicator = sbar.add("item", {
 	},
 })
 
-space_window_observer:subscribe("space_windows_change", function(env)
-	print("space_windows_change" .. inspect(env.INFO))
-	local icon_line = ""
-	local no_app = true
-	for app, _ in pairs(env.INFO.apps) do
-		no_app = false
-		local lookup = app_icons[app]
-		local icon = ((lookup == nil) and app_icons["default"] or lookup)
-		icon_line = icon_line .. " " .. icon
-	end
-
-	if no_app then
-		icon_line = " —"
-	end
-	sbar.animate("tanh", 10, function()
-		spaces[env.INFO.space]:set({ label = icon_line })
-	end)
-end)
-
 spaces_indicator:subscribe("swap_menus_and_spaces", function(_)
 	print("swap_menus_and_spaces")
 	local currently_on = spaces_indicator:query().icon.value == icons.switch.on
