@@ -120,3 +120,8 @@ rabbitmq
 volumeMounts
 PersistentVolumeClaims
 init
+folder
+mq
+eu
+temurin
+PEM
