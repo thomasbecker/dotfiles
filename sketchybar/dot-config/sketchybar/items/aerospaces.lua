@@ -5,18 +5,28 @@ local settings = require("settings")
 local app_icons = require("helpers.app_icons")
 
 local spaces = {}
-local workspaces = {}
 
-local handle = assert(io.popen("aerospace list-workspaces --all"))
-local result = handle:read("*a")
-handle:close()
-for string in string.gmatch(result, "%S+") do
-	table.insert(workspaces, string)
+function GetCommandOutput(command)
+	print("command: " .. command)
+	local output = {}
+
+	local handle = assert(io.popen(command))
+	local result = handle:read("*a")
+	handle:close()
+	for string in string.gmatch(result, "[^\r\n]+") do
+		table.insert(output, string)
+	end
+
+	return output
 end
+
+local workspaces = GetCommandOutput("aerospace list-workspaces --all")
+
 print("workspaces: " .. inspect(workspaces))
-for _, workspace in ipairs(workspaces) do
-	local space = sbar.add("item", "space." .. workspace, {
-		-- space = workspace,
+for i, workspace in ipairs(workspaces) do
+	print("workspace: " .. workspace .. ", i: " .. i)
+	local space_id = "space." .. workspace
+	local space = sbar.add("item", space_id, {
 		icon = {
 			font = { family = settings.font.numbers },
 			string = workspace,
@@ -121,12 +131,27 @@ local spaces_indicator = sbar.add("item", {
 	},
 })
 
-spaces_indicator:subscribe("swap_menus_and_spaces", function(_)
-	print("swap_menus_and_spaces")
-	local currently_on = spaces_indicator:query().icon.value == icons.switch.on
-	spaces_indicator:set({
-		icon = currently_on and icons.switch.off or icons.switch.on,
-	})
+space_window_observer:subscribe("space_windows_change", function(env)
+	print("space_windows_change: " .. inspect(workspaces))
+	local no_app = true
+
+	for _, workspace in pairs(workspaces) do
+		local icon_line = ""
+		local apps = GetCommandOutput(
+			"aerospace list-windows --workspace " .. workspace .. " | awk -F'|' '{gsub(/^ *| *$/, \"\", $2); print $2}'"
+		)
+		print("apps: " .. inspect(apps))
+		for _, app in pairs(apps) do
+			print("app: " .. app)
+			local lookup = app_icons[app]
+			local icon = ((lookup == nil) and app_icons["default"] or lookup)
+			icon_line = icon_line .. " " .. icon
+		end
+		print("icon_line: " .. icon_line)
+		sbar.animate("tanh", 10, function()
+			spaces[workspace]:set({ label = icon_line })
+		end)
+	end
 end)
 
 spaces_indicator:subscribe("mouse.entered", function(_)
