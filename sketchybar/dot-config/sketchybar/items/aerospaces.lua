@@ -132,22 +132,19 @@ local spaces_indicator = sbar.add("item", {
 })
 
 space_window_observer:subscribe("space_windows_change", function(env)
-	print("space_windows_change: " .. inspect(workspaces))
-	local no_app = true
-
 	for _, workspace in pairs(workspaces) do
 		local icon_line = ""
 		local apps = GetCommandOutput(
 			"aerospace list-windows --workspace " .. workspace .. " | awk -F'|' '{gsub(/^ *| *$/, \"\", $2); print $2}'"
 		)
-		print("apps: " .. inspect(apps))
+		if next(apps) == nil then
+			icon_line = "-"
+		end
 		for _, app in pairs(apps) do
-			print("app: " .. app)
 			local lookup = app_icons[app]
 			local icon = ((lookup == nil) and app_icons["default"] or lookup)
 			icon_line = icon_line .. " " .. icon
 		end
-		print("icon_line: " .. icon_line)
 		sbar.animate("tanh", 10, function()
 			spaces[workspace]:set({ label = icon_line })
 		end)
