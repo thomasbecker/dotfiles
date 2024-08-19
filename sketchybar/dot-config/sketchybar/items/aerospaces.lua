@@ -7,7 +7,6 @@ local app_icons = require("helpers.app_icons")
 local spaces = {}
 
 function GetCommandOutput(command)
-	print("command: " .. command)
 	local output = {}
 
 	local handle = assert(io.popen(command))
@@ -22,9 +21,7 @@ end
 
 local workspaces = GetCommandOutput("aerospace list-workspaces --all")
 
-print("workspaces: " .. inspect(workspaces))
 for i, workspace in ipairs(workspaces) do
-	print("workspace: " .. workspace .. ", i: " .. i)
 	local space_id = "space." .. workspace
 	local space = sbar.add("item", space_id, {
 		icon = {
