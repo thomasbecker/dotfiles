@@ -27,6 +27,16 @@ M.apply_to_config = function(config)
 			mods = "CTRL|SHIFT",
 			action = act.ActivatePaneDirection("Right"),
 		},
+		{
+			key = "b",
+			mods = "CTRL|SHIFT",
+			action = act.RotatePanes("CounterClockwise"),
+		},
+		{
+			key = "v",
+			mods = "CTRL|SHIFT",
+			action = act.RotatePanes("Clockwise"),
+		},
 		{ key = "PageDown", mods = "SHIFT", action = act.ScrollByPage(0.75) },
 		{
 			key = "d",
