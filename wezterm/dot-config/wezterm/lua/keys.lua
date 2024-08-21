@@ -6,6 +6,11 @@ local M = {}
 M.apply_to_config = function(config)
 	config.keys = {
 		{ key = "0", mods = "CTRL", action = act.PaneSelect },
+		{
+			key = "1",
+			mods = "CTRL",
+			action = act.PaneSelect({ mode = "SwapWithActive" }),
+		},
 		{ key = "PageUp", mods = "SHIFT", action = act.ScrollByPage(-0.75) },
 		{
 			key = "h",
