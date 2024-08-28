@@ -21,28 +21,5 @@ return {
         },
       },
     },
-    keys = {
-      {
-        "<leader>fs",
-        function()
-          require("telescope.builtin").find_files({ cwd = "~/.dotfiles", hidden = true })
-        end,
-        desc = "Find dotfiles",
-      },
-      {
-        "<leader>fp",
-        function()
-          require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
-        end,
-        desc = "Find Plugin File",
-      },
-      {
-        "<leader>fz",
-        function()
-          require("telescope.builtin").find_files({ cwd = "~/.config/zsh", hidden = true })
-        end,
-        desc = "Find Zsh Files",
-      },
-    },
   },
 }

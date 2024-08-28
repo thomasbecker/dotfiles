@@ -9,15 +9,42 @@ return {
         fd_opts = [[--color=never --type f --follow --exclude .git]],
         cwd_prompt = false,
         actions = {
-          ["alt-i"] = { actions.toggle_ignore },
+          -- ["alt-i"] = { actions.toggle_ignore },
           ["alt-d"] = { actions.toggle_hidden },
+          ["alt-h"] = "",
+          ["ctrl-g"] = "",
         },
       },
       grep = {
         actions = {
-          ["alt-i"] = { actions.toggle_ignore },
+          -- ["alt-i"] = { actions.toggle_ignore },
           ["alt-d"] = { actions.toggle_hidden },
+          ["alt-h"] = "",
+          ["ctrl-g"] = "",
         },
+      },
+    },
+    keys = {
+      {
+        "<leader>fd",
+        function()
+          require("fzf-lua").files({ cwd = "~/.config" })
+        end,
+        desc = "Find dotfiles",
+      },
+      {
+        "<leader>fp",
+        function()
+          require("fzf-lua").files({ cwd = require("lazy.core.config").options.root })
+        end,
+        desc = "Find Plugin File",
+      },
+      {
+        "<leader>fz",
+        function()
+          require("fzf-lua").files({ cwd = "~/.config/zsh", hidden = true })
+        end,
+        desc = "Find Zsh Files",
       },
     },
   },
