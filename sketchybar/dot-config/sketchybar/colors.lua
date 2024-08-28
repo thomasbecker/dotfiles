@@ -10,6 +10,8 @@ local colors = {
 	magenta = 0xffcba6f7,
 	grey = 0xff9399b2,
 	transparent = 0x00000000,
+	mantle = 0xff181825,
+	crust = 0xff11111b,
 
 	bar = {
 		bg = 0xff1e1e2e,

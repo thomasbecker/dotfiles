@@ -31,9 +31,10 @@ local media_artist = sbar.add("item", {
 	icon = { drawing = false },
 	label = {
 		width = 0,
-		font = { size = 9 },
-		color = colors.with_alpha(colors.white, 0.6),
-		max_chars = 18,
+		font = { size = 10 },
+		color = colors.mantle,
+		-- color = colors.with_alpha(colors.white, 0.6),
+		max_chars = 32,
 		y_offset = 6,
 	},
 })
@@ -47,7 +48,8 @@ local media_title = sbar.add("item", {
 	label = {
 		font = { size = 11 },
 		width = 0,
-		max_chars = 16,
+		color = colors.mantle,
+		max_chars = 32,
 		y_offset = -5,
 	},
 })
