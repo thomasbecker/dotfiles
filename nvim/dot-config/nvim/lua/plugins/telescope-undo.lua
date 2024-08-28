@@ -15,13 +15,15 @@ return {
       },
     },
     opts = {
-      -- don't use `defaults = { }` here, do this in the main telescope spec
-      extensions = {
-        undo = {
-          -- telescope-undo.nvim config, see below
-        },
-        -- no other extensions here, they can have their own spec too
-      },
+      -- extensions = {
+      --   undo = {
+      --     side_by_side = true,
+      --     layout_strategy = "vertical",
+      --     layout_config = {
+      --       preview_height = 0.8,
+      --     },
+      --   },
+      -- },
     },
     config = function(_, opts)
       -- Calling telescope's setup from multiple specs does not hurt, it will happily merge the
