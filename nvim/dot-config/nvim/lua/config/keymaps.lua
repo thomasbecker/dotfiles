@@ -20,3 +20,6 @@ map("i", "<C-T-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move line up" })
 
 -- Add word to spell list and jump to next misspelled word
 map("n", "zg", "zg]s", { desc = "Add word to spell list and jump to next misspelled word" })
+
+-- work in progsess
+-- map("n", "<leader>rs", "<cmd>g;<c-r><c-w>; s;[a-z]@<=[A-Z];_l&;g<cr>", { desc = "Replace camel case with snake case" })
