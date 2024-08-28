@@ -16,5 +16,6 @@ local colors = {
 	surface2 = "#585b70",
 	overlay1 = "#7f849c",
 	mantle = "#181825",
+	crust = "#11111b",
 }
 return colors
