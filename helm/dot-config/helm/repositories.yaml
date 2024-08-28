@@ -10,3 +10,12 @@ repositories:
   password: ""
   url: https://helm.elastic.co
   username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: kafka-ui
+  pass_credentials_all: false
+  password: ""
+  url: https://provectus.github.io/kafka-ui-charts
+  username: ""
