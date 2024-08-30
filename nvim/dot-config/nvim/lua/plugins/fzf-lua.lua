@@ -46,6 +46,27 @@ return {
         end,
         desc = "Find Zsh Files",
       },
+      {
+        "<leader>sxd",
+        function()
+          require("fzf-lua").lsp_declarations()
+        end,
+        desc = "Find declarations",
+      },
+      {
+        "<leader>sxr",
+        function()
+          require("fzf-lua").lsp_references()
+        end,
+        desc = "Find references",
+      },
+      {
+        "<leader>sxf",
+        function()
+          require("fzf-lua").lsp_finder()
+        end,
+        desc = "Find lsp finder (all lsp locations, combined view)",
+      },
     },
   },
 }
