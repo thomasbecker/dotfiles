@@ -56,7 +56,7 @@ brew:subscribe({ "routine", "brew_update" }, function()
 			color = getThresholdColor(count)
 			drawing = "on"
 		end
-		print("color: ", color, "count: ", count, "icon: ", icon, "label: ", label, "drawing: ", drawing)
+		-- print("color: ", color, "count: ", count, "icon: ", icon, "label: ", label, "drawing: ", drawing)
 		brew:set({
 			icon = {
 				string = icon,
