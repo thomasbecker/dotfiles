@@ -87,7 +87,11 @@ M.apply_to_config = function(config)
 				end),
 			}),
 		},
-		-- other keys
+		{
+			key = "F",
+			mods = "CMD",
+			action = act.Search({ CaseInSensitiveString = "" }),
+		},
 	}
 
 	config.leader = { key = "a", mods = "CMD", timeout_milliseconds = 1000 }
