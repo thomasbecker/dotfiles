@@ -81,7 +81,7 @@ _fzf_compgen_dir() {
 source ~/.config/fzf-git.sh/fzf-git.sh
 
 export BAT_THEME=Catppuccin-mocha
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/usr/local/bin:/opt/homebrew/opt/curl/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
