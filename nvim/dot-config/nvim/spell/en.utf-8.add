@@ -177,3 +177,9 @@ GitOps
 PlusNg
 config
 replicationFactor
+Bezugsobjekt
+growing
+Neovim
+IDEs
+lifecycle
+failureThreshold
