@@ -2,6 +2,8 @@ return {
   {
     "frankroeder/parrot.nvim",
     dependencies = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim", "rcarriga/nvim-notify" },
+    event = "VeryLazy",
+    lazy = false,
     config = function()
       require("parrot").setup({
         providers = {
@@ -17,18 +19,68 @@ return {
         command_auto_select_response = true,
         hooks = {
           Complete = function(prt, params)
-            local template = [[
+            local chat_prompt = [[
         I have the following code from {{filename}}:
 
-        ```{{filetype}}
-        {{selection}}
-        ```
-
-        Please finish the code above carefully and logically.
-        Respond just with the snippet of code that should be inserted."
+        You will be given two inputs:
+        
+        1. The Pull Request content:
+        <pull_request>
+        {{PULL_REQUEST}}
+        </pull_request>
+        
+        2. The primary programming language used in the PR:
+        <language>
+        {{PROGRAMMING_LANGUAGE}}
+        </language>
+        
+        Review Process:
+        1. Carefully read through the entire Pull Request, paying close attention to the code changes, commit messages, and any comments or discussions.
+        
+        2. Assess the overall code quality, considering factors such as:
+           - Adherence to best practices and coding standards for the specified programming language
+           - Proper use of data structures and algorithms
+           - Efficient and optimized code
+        
+        3. Identify any potential bugs or logical errors in the code. Consider edge cases and possible runtime issues.
+        
+        4. Evaluate the architectural decisions made in the code changes. Suggest improvements that could enhance scalability, maintainability, or performance.
+        
+        5. Analyze the readability of the code, including:
+           - Appropriate use of comments and documentation
+           - Clear and descriptive variable and function names
+           - Consistent formatting and indentation
+           - Modular and well-organized code structure
+        
+        6. Detect any typos in variable names, comments, or string literals.
+        
+        Output Format:
+        Provide your review in the following format, enclosed in <review> tags:
+        
+        <review>
+        1. Overall Assessment:
+           Briefly summarize the quality of the PR and its potential impact on the codebase.
+        
+        2. Bugs and Logical Errors:
+           List any identified bugs or logical errors, explaining the potential issues and suggesting fixes.
+        
+        3. Architectural Improvements:
+           Propose architectural enhancements that could benefit the code structure, scalability, or performance.
+        
+        4. Readability Enhancements:
+           Suggest improvements for code readability, including better naming conventions, comments, or code organization.
+        
+        5. Typos:
+           Point out any detected typos in the code, comments, or documentation.
+        
+        6. Additional Comments:
+           Provide any other relevant feedback or suggestions not covered in the previous sections.
+        </review>
+        
+        Ensure your review is concise yet comprehensive, focusing on the most critical aspects of the code changes. Provide specific examples and line numbers when referring to particular parts of the code. Be constructive in your feedback, offering clear explanations and suggestions for improvement. 
         ]]
             local model_obj = prt.get_model("command")
-            prt.Prompt(params, prt.ui.Target.append, model_obj, nil, template)
+            prt.ChatNew(params, chat_prompt)
           end,
           CompleteFullContext = function(prt, params)
             local template = [[
