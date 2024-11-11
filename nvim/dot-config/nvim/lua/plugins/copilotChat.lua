@@ -27,12 +27,21 @@ return {
     -- end,
 
     keys = {
+      { "<leader>aa", false },
+      {
+        mode = { "n", "v" },
+        "<leader>ap",
+        function()
+          return require("CopilotChat").toggle()
+        end,
+        desc = "Toggle (CopilotChat)",
+      },
       { mode = { "n", "v" }, "<leader>ae", "<cmd>CopilotChatExplain<cr>", desc = "Copilot explain" },
       { mode = { "n", "v" }, "<leader>af", "<cmd>CopilotChatFix<cr>", desc = "Copilot fix" },
       { mode = { "n", "v" }, "<leader>ao", "<cmd>CopilotChatOptimize<cr>", desc = "Copilot optimize" },
       {
         mode = { "n", "v" },
-        "<leader>ac",
+        "<leader>am",
         "<cmd>CopilotChatCommitStaged<cr>",
         desc = "Copilot write commit message for staged changes",
       },

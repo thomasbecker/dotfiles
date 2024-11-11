@@ -19,6 +19,20 @@ return {
         command_auto_select_response = true,
         hooks = {
           Complete = function(prt, params)
+            local template = [[
+        I have the following code from {{filename}}:
+
+        ```{{filetype}}
+        {{selection}}
+        ```
+
+        Please finish the code above carefully and logically.
+        Respond just with the snippet of code that should be inserted."
+        ]]
+            local model_obj = prt.get_model("command")
+            prt.Prompt(params, prt.ui.Target.append, model_obj, nil, template)
+          end,
+          PRReview = function(prt, params)
             local chat_prompt = [[
         I have the following code from {{filename}}:
 
@@ -284,6 +298,44 @@ return {
         {ideal text}
         ]]
             prt.ChatNew(params, chat_prompt)
+          end,
+          ProofReadCurrentFile = function(prt, params)
+            local template = [[
+        I want you to act as a proofreader. I will provide you with a text at
+        the end of this prompt and I would like you to review them for any
+        spelling, grammar, or punctuation errors. Once you have finished
+        reviewing the text, provide me with any necessary corrections or
+        suggestions to improve the text. Highlight the corrected fragments (if
+        any) using markdown backticks.
+
+        When you have done that subsequently provide me with a slightly better
+        version of the text, but keep close to the original text.
+
+        Finally provide me with an ideal version of the text.
+
+        Whenever I provide you with text, you reply in this format directly:
+
+        ## Corrected text:
+
+       {corrected text, or say "NO_CORRECTIONS_NEEDED" instead if there are no
+       corrections made}
+
+        ## Slightly better text
+
+        {slightly better text}
+
+        ## Ideal text
+
+        {ideal text}
+
+        Here is the text I want you to proof read:
+        ```{{filetype}}
+        {{filecontent}}
+        ```
+        ]]
+            local model_obj = prt.get_model("command")
+            prt.logger.info("Proof reading current file: " .. model_obj.name)
+            prt.Prompt(params, prt.ui.Target.vnew, model_obj, nil, template)
           end,
         },
       })
