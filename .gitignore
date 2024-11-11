@@ -5,3 +5,5 @@ Google/dot-config/Google/Jib/lastUpdateCheck
 raycast/dot-config/raycast/extensions
 wireshark/dot-config/wireshark
 dlv/dot-config/dlv/.dbg_history
+gh/dot-config/gh/hosts.yml
+NuGet/dot-config/NuGet/NuGet.config
