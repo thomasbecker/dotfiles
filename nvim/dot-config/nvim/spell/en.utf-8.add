@@ -183,3 +183,10 @@ Neovim
 IDEs
 lifecycle
 failureThreshold
+Autoscaling
+DeschedulerPolicy
+maxSurge
+maxUnavailable
+rollouts
+Redis
+kubectl
