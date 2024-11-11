@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
 local mux = wezterm.mux
 local config = wezterm.config_builder()
 local keys = require("lua.keys")
@@ -11,6 +12,8 @@ if os_name == "windows" then
 	-- on mac yabai adds the transparency
 end
 config.window_background_opacity = 0.90
+
+workspace_switcher.apply_to_config(config)
 
 wezterm.on("gui-startup", function()
 	local tab, pane, window = mux.spawn_window({})

@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
 local act = wezterm.action
 
 local M = {}
@@ -12,6 +13,8 @@ M.apply_to_config = function(config)
 			action = act.PaneSelect({ mode = "SwapWithActive" }),
 		},
 		{ key = "PageUp", mods = "SHIFT", action = act.ScrollByPage(-0.75) },
+		{ key = "l", mods = "LEADER", action = act.ShowLauncher },
+		{ key = "s", mods = "LEADER", action = workspace_switcher.switch_workspace() },
 		{
 			key = "h",
 			mods = "CTRL|SHIFT",
