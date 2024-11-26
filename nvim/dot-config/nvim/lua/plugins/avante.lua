@@ -11,7 +11,7 @@ return {
       "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
-      -- -{
+      -- {
       --   -- support for image pasting
       --   "HakonHarnes/img-clip.nvim",
       --   event = "VeryLazy",
