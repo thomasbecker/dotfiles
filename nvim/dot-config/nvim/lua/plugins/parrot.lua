@@ -3,7 +3,6 @@ return {
     "frankroeder/parrot.nvim",
     dependencies = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim", "rcarriga/nvim-notify" },
     event = "VeryLazy",
-    lazy = false,
     config = function()
       require("parrot").setup({
         providers = {
