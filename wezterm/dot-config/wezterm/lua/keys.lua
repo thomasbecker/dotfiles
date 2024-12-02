@@ -14,6 +14,11 @@ M.apply_to_config = function(config)
 		},
 		{ key = "PageUp", mods = "SHIFT", action = act.ScrollByPage(-0.75) },
 		{ key = "l", mods = "LEADER", action = act.ShowLauncher },
+		{
+			key = "z",
+			mods = "LEADER",
+			action = wezterm.action.TogglePaneZoomState,
+		},
 		{ key = "s", mods = "LEADER", action = workspace_switcher.switch_workspace() },
 		{
 			key = "h",
