@@ -3,8 +3,10 @@ return {
     "chrisgrieser/nvim-various-textobjs",
     lazy = false,
     opts = {
-      useDefaultKeymaps = true,
-      disabledKeymaps = { "n" },
+      keymaps = {
+        useDefaults = true,
+        disabledDefaults = { "n" },
+      },
     },
     keys = {
       {
