@@ -11,7 +11,7 @@ if os_name == "windows" then
 	config.default_domain = "WSL:rancher-desktop"
 	-- on mac yabai adds the transparency
 end
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.80
 
 workspace_switcher.apply_to_config(config)
 
