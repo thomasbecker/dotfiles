@@ -12,7 +12,7 @@ return {
       -- opts.root_dir = require("lspconfig.server_configurations.jdtls").default_config.root_dir
       opts.cmd = {
         "java",
-        "--enable-preview",
+        -- "--enable-preview",
         "-Declipse.application=org.eclipse.jdt.ls.core.id1",
         "-Dosgi.bundles.defaultStartLevel=4",
         "-Declipse.product=org.eclipse.jdt.ls.core.product",
