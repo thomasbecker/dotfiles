@@ -4,6 +4,7 @@ return {
     lazy = true,
     opts = {
       debug = false, -- Enable debugging
+      model = "claude-3.5-sonnet",
       auto_insert_mode = false,
       mappings = {
         reset = {
@@ -27,7 +28,7 @@ return {
     -- end,
 
     keys = {
-      { "<leader>aa", false },
+      { mode = { "n", "v" }, "<leader>aa", false },
       {
         mode = { "n", "v" },
         "<leader>ap",
