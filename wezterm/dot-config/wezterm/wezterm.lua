@@ -11,12 +11,15 @@ if os_name == "windows" then
 	config.default_domain = "WSL:rancher-desktop"
 	-- on mac yabai adds the transparency
 end
-config.window_background_opacity = 0.80
+
+config.front_end = "WebGpu"
+config.max_fps = 120
+config.window_background_opacity = 0.90
 
 workspace_switcher.apply_to_config(config)
 
 wezterm.on("gui-startup", function()
-	local tab, pane, window = mux.spawn_window({})
+	local _, _, window = mux.spawn_window({})
 	window:gui_window():maximize()
 end)
 local font = "JetBrainsMono Nerd Font Mono"
