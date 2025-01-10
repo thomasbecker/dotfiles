@@ -14,7 +14,7 @@ end
 
 config.front_end = "WebGpu"
 config.max_fps = 120
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.80
 
 workspace_switcher.apply_to_config(config)
 

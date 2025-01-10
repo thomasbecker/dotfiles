@@ -7,3 +7,5 @@ wireshark/dot-config/wireshark
 dlv/dot-config/dlv/.dbg_history
 gh/dot-config/gh/hosts.yml
 NuGet/dot-config/NuGet/NuGet.config
+btop/.config/btop/btop.log
+karabiner/dot-config/karabiner/automatic_backups
