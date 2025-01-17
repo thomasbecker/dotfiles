@@ -118,6 +118,7 @@ f = [
   'layout floating tiling',
   'mode main',
 ] # Toggle between floating and tiling layout
+z = ['macos-native-fullscreen']
 backspace = ['close-all-windows-but-current', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
