@@ -21,7 +21,7 @@ end
 
 local workspaces = GetCommandOutput("aerospace list-workspaces --all")
 
-for i, workspace in ipairs(workspaces) do
+for _, workspace in ipairs(workspaces) do
 	local space_id = "space." .. workspace
 	local space = sbar.add("item", space_id, {
 		icon = {
