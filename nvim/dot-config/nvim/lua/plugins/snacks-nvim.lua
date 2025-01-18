@@ -2,7 +2,16 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
-      picker = {},
+      picker = {
+        win = {
+          input = {
+            keys = {
+              ["<a-h>"] = nil,
+              ["<a-d>"] = { "toggle_hidden", mode = { "i", "n" } },
+            },
+          },
+        },
+      },
       dashboard = {
         preset = {
           header = [[ 
