@@ -48,11 +48,12 @@ return {
             cond = require("noice").api.statusline.mode.has,
             color = { fg = colors.teal },
           },
-          {
-            "rest",
-            icon = "",
-            fg = "#428890",
-          },
+          -- TODO: it's useful as it shows the current env being used in rest, but it prevents rest from lazy starting and rest loads telescope as well, etc.
+          -- {
+          --   "rest",
+          --   icon = "",
+          --   fg = "#428890",
+          -- },
         },
       },
     },
