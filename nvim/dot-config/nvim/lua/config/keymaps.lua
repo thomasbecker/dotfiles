@@ -23,5 +23,6 @@ map("n", "zg", "zg]s", { desc = "Add word to spell list and jump to next misspel
 
 map("n", "<leader>cn", "<cmd>cnext<cr>", { desc = "Go to next quickfix item" })
 map("n", "<leader>cp", "<cmd>cprev<cr>", { desc = "Go to previous quickfix item" })
+
 -- work in progsess
 -- map("n", "<leader>rs", "<cmd>g;<c-r><c-w>; s;[a-z]@<=[A-Z];_l&;g<cr>", { desc = "Replace camel case with snake case" })

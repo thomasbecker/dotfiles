@@ -15,11 +15,23 @@
 --   end,
 -- })
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+-- Dim inactive windows
+vim.api.nvim_set_hl(0, "DimInactiveWindows", { fg = "#666666" })
+
+-- When leaving a window, set all highlight groups to a "dimmed" hl_group
+vim.api.nvim_create_autocmd({ "WinLeave" }, {
   callback = function()
-    vim.cmd("EslintFixAll")
-    Utils.format({ force = true })
+    local highlights = {}
+    for hl, _ in pairs(vim.api.nvim_get_hl(0, {})) do
+      table.insert(highlights, hl .. ":DimInactiveWindows")
+    end
+    vim.wo.winhighlight = table.concat(highlights, ",")
   end,
-  group = autogroup_eslint_lsp,
+})
+
+-- When entering a window, restore all highlight groups to original
+vim.api.nvim_create_autocmd({ "WinEnter" }, {
+  callback = function()
+    vim.wo.winhighlight = ""
+  end,
 })
