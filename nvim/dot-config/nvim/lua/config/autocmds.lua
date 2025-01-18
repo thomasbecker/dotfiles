@@ -16,7 +16,7 @@
 -- })
 
 -- Dim inactive windows
-vim.api.nvim_set_hl(0, "DimInactiveWindows", { fg = "#666666" })
+vim.api.nvim_set_hl(0, "DimInactiveWindows", { fg = "#cdd6f4" })
 
 -- When leaving a window, set all highlight groups to a "dimmed" hl_group
 vim.api.nvim_create_autocmd({ "WinLeave" }, {
