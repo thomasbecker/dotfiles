@@ -42,12 +42,25 @@ return {
       },
       sections = {
         lualine_x = {
-          -- showmode shown in lualine e.g. for macro recording messages
           {
-            require("noice").api.statusline.mode.get,
-            cond = require("noice").api.statusline.mode.has,
-            color = { fg = colors.teal },
+            require("noice").api.status.message.get_hl,
+            cond = require("noice").api.status.message.has,
           },
+          {
+            require("noice").api.status.command.get,
+            cond = require("noice").api.status.command.has,
+            color = { fg = "#ff9e64" },
+          },
+          {
+            require("noice").api.status.mode.get,
+            cond = require("noice").api.status.mode.has,
+            color = { fg = "#ff9e64" },
+          },
+          {
+            require("noice").api.status.search.get,
+            cond = require("noice").api.status.search.has,
+            color = { fg = "#ff9e64" },
+          }, -- showmode shown in lualine e.g. for macro recording messages
           -- TODO: it's useful as it shows the current env being used in rest, but it prevents rest from lazy starting and rest loads telescope as well, etc.
           -- {
           --   "rest",
