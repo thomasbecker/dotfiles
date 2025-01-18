@@ -52,18 +52,22 @@ defaults:
         width: 20
         hidden: true
   refetchIntervalMinutes: 30
-keybindings:
-  prs:
-    - key: c
-      command: >
-        wezterm cli spawn --cwd {{.RepoPath}} '
-          gh pr checkout {{.PrNumber}} &&
-          nvim -c ":DiffviewOpen master...{{.HeadRefName}}"
-        ':
-  universal: []
-  issues: []
-  branches: []
 theme:
+  colors:
+    text:
+      primary: "#cdd6f4"
+      secondary: "#89dceb"
+      inverted: "#11111b"
+      faint: "#bac2de"
+      warning: "#f9e2af"
+      success: "#a6e3a1"
+      error: "#f38ba8"
+    background:
+      selected: "#313244"
+    border:
+      primary: "#89dceb"
+      secondary: "#45475a"
+      faint: "#313244"
   ui:
     sectionsShowCount: true
     table:
