@@ -52,6 +52,13 @@ defaults:
         width: 20
         hidden: true
   refetchIntervalMinutes: 30
+keybindings:
+  prs:
+    - key: n
+      command: /opt/homebrew/bin/wezterm cli spawn --cwd {{.RepoPath}} bash -c 'gh pr checkout {{.PrNumber}} && nvim -c "DiffviewOpen main...{{.HeadRefName}}"'
+  universal: []
+  issues: []
+  branches: []
 theme:
   colors:
     text:
@@ -79,4 +86,4 @@ confirmQuit: false
 
 repoPaths:
   # dlvhdr/gh-dash: ~//gh-dash
-  abat/common-artifacts: ~/workspaces/abat/common-artifacts/
+  plusng/*: /Users/tbecker/workspaces/abat/*
