@@ -35,3 +35,16 @@ vim.api.nvim_create_autocmd({ "WinEnter" }, {
     vim.wo.winhighlight = ""
   end,
 })
+
+-- Reset only active window highlights when lazygit closes
+vim.api.nvim_create_autocmd("TermClose", {
+  pattern = "*lazygit*",
+  callback = function()
+    -- Small delay to ensure proper window handling
+    vim.defer_fn(function()
+      local current_win = vim.api.nvim_get_current_win()
+      -- Reset highlights only for active window
+      vim.wo[current_win].winhighlight = ""
+    end, 10)
+  end,
+})
