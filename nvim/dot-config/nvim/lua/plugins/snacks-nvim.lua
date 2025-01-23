@@ -7,7 +7,9 @@ return {
           input = {
             keys = {
               ["<a-h>"] = nil,
-              ["<a-d>"] = { "toggle_hidden", mode = { "i", "n" } },
+              ["<a-m>"] = nil,
+              ["<a-e>"] = { "toggle_hidden", mode = { "i", "n" } },
+              ["<a-z>"] = { "toggle_maximize", mode = { "i", "n" } },
             },
           },
         },
