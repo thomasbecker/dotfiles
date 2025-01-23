@@ -9,7 +9,7 @@ return {
     },
     keys = {
       {
-        "<leader>uu",
+        "<leader>ut",
         "<cmd>Telescope undo<cr>",
         desc = "undo history",
       },
@@ -20,10 +20,11 @@ return {
           side_by_side = true,
           layout_strategy = "vertical",
           layout_config = {
-            preview_height = 0.7,
+            preview_height = 0.8,
           },
         },
       },
+      -- no other extensions here, they can have their own spec too
     },
     config = function(_, opts)
       -- Calling telescope's setup from multiple specs does not hurt, it will happily merge the
