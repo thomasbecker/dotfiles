@@ -15,15 +15,24 @@
 --   end,
 -- })
 
--- Dim inactive windows
-vim.api.nvim_set_hl(0, "DimInactiveWindows", { fg = "#cdd6f4" })
+-- Subtle dimming for inactive windows
+vim.api.nvim_set_hl(0, "DimInactiveText", { fg = "#a6adc8" }) -- Slightly dimmed text
 
--- When leaving a window, set all highlight groups to a "dimmed" hl_group
+-- Apply subtle dimming only to text-related highlights in inactive windows
 vim.api.nvim_create_autocmd({ "WinLeave" }, {
   callback = function()
+    local text_highlights = {
+      "Normal",
+      "Comment",
+      "LineNr",
+      "Identifier",
+      "Function",
+      "String",
+      "Keyword",
+    }
     local highlights = {}
-    for hl, _ in pairs(vim.api.nvim_get_hl(0, {})) do
-      table.insert(highlights, hl .. ":DimInactiveWindows")
+    for _, hl in ipairs(text_highlights) do
+      table.insert(highlights, hl .. ":DimInactiveText")
     end
     vim.wo.winhighlight = table.concat(highlights, ",")
   end,
@@ -37,7 +46,7 @@ vim.api.nvim_create_autocmd({ "WinEnter" }, {
 })
 
 -- Reset only active window highlights when lazygit closes
-vim.api.nvim_create_autocmd("TermClose", {
+vim.api.nvim_create_autocmd({ "TermClose", "TermOpen", "TermEnter", "TermLeave" }, {
   pattern = "*lazygit*",
   callback = function()
     -- Small delay to ensure proper window handling
