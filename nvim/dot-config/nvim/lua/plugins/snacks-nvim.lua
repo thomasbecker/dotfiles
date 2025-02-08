@@ -3,6 +3,10 @@ return {
     "folke/snacks.nvim",
     opts = {
       picker = {
+        layout = "default",
+        matcher = {
+          -- frecency = true,
+        },
         win = {
           input = {
             keys = {
@@ -26,6 +30,12 @@ I DO NOT use Arch by the way ...
       ]],
         },
       },
+      explorer = {
+        replace_netrw = true,
+      },
+    },
+    keys = {
+      { mode = { "n", "v" }, "<leader>e", "<cmd>lua Snacks.explorer()<cr>" },
     },
   },
 }
