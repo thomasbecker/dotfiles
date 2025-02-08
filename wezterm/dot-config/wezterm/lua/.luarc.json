@@ -1,0 +1,7 @@
+{
+  "workspace": {
+    "library": [
+      "$HOME/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/3rd/wezterm/"
+    ]
+  }
+}
