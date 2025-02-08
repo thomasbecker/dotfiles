@@ -1,0 +1,4 @@
+watch-files: true
+gitignore: false
+auto-commits: false
+code-theme: one-dark
