@@ -1,7 +1,6 @@
 return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    lazy = true,
     opts = {
       debug = false, -- Enable debugging
       model = "claude-3.5-sonnet",
