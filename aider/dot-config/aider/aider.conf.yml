@@ -1,4 +1,7 @@
 watch-files: true
 gitignore: false
-auto-commits: false
+attribute-committer: false
+attribute-author: false
+# auto-commits: false
 code-theme: one-dark
+vim: true
