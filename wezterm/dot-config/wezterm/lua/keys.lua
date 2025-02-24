@@ -5,6 +5,8 @@ local act = wezterm.action
 local M = {}
 
 M.apply_to_config = function(config)
+	config.send_composed_key_when_left_alt_is_pressed = true
+	config.leader = { key = "a", mods = "CMD", timeout_milliseconds = 1000 }
 	config.keys = {
 		{ key = "0", mods = "CTRL", action = act.PaneSelect },
 		{
@@ -101,8 +103,6 @@ M.apply_to_config = function(config)
 			action = act.Search({ CaseInSensitiveString = "" }),
 		},
 	}
-
-	config.leader = { key = "a", mods = "CMD", timeout_milliseconds = 1000 }
 end
 
 return M
