@@ -2,7 +2,14 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
-      image = {},
+      image = {
+        force = true,
+        doc = {
+          enabled = true,
+          inline = true,
+          float = false,
+        },
+      },
       picker = {
         layout = "default",
         matcher = {
