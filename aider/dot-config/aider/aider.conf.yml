@@ -1,4 +1,5 @@
 watch-files: true
+sonnet: true
 gitignore: false
 attribute-committer: false
 attribute-author: false
