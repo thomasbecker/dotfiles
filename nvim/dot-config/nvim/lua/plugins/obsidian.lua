@@ -1,7 +1,6 @@
 return {
   {
-    "epwalsh/obsidian.nvim",
-    version = "*", -- recommended, use latest release instead of latest commit
+    "thomasbecker/obsidian.nvim",
     lazy = true,
     event = {
       "BufReadPre /Users/tbecker/Library/Mobile Documents/com~apple~CloudDocs/Documents/obsidian/**.md",
@@ -11,6 +10,9 @@ return {
       "nvim-lua/plenary.nvim",
     },
     opts = {
+      picker = {
+        name = "snacks.pick",
+      },
       workspaces = {
         {
           name = "Work",
@@ -57,39 +59,7 @@ return {
     keys = {
       { mode = { "n" }, "<leader>on", "<cmd>ObsidianNewFromTemplate<cr>", desc = "Obsidian new" },
       { mode = { "n" }, "<leader>od", "<cmd>ObsidianToday<cr>", desc = "Obsidian new daily today" },
-      {
-        mode = { "n" },
-        "<leader>os",
-        function()
-          -- Get the current workspace path from obsidian.nvim
-          local obsidian = require("obsidian")
-          local client = obsidian.get_client()
-          local vault = client and client.dir or nil
-
-          if not vault then
-            vim.notify("No active Obsidian workspace found", vim.log.levels.WARN)
-            return
-          end
-
-          Snacks.picker.pick("grep", {
-            cwd = vault.filename,
-            actions = {
-              create_note = function(picker, item)
-                picker:close()
-                vim.cmd("ObsidianNew " .. picker.finder.filter.search)
-              end,
-            },
-            win = {
-              input = {
-                keys = {
-                  ["<c-x>"] = { "create_note", desc = "Create new note", mode = { "i", "n" } },
-                },
-              },
-            },
-          })
-        end,
-        desc = "Obsidian search",
-      },
+      { mode = { "n" }, "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "Obsidian Search" },
       { mode = { "n" }, "<leader>ot", "<cmd>ObsidianTags<cr>", desc = "Obsidian tags" },
       { mode = { "n" }, "<leader>oe", "<cmd>ObsidianTemplate<cr>", desc = "Obsidian template" },
       { mode = { "n" }, "<leader>ow", "<cmd>ObsidianWorkspace<cr>", desc = "Obsidian workspaces" },
