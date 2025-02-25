@@ -89,5 +89,9 @@ export PATH="/usr/local/bin:/opt/homebrew/opt/curl/bin:$PATH"
 #   eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/my-posh-settings.toml)"
 # fi
 
+# kubeswitch
+source <(switcher init zsh)
+source <(switch completion zsh)
+
 # disable kubectl segment by default
 # oh-my-posh toggle kubectl
