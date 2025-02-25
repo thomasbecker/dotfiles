@@ -237,3 +237,4 @@ Dockerfile
 eclipse-temurin
 JRE
 JDK
+jwt
