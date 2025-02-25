@@ -3,7 +3,12 @@ return {
     "yetone/avante.nvim",
     event = "VeryLazy",
     version = false,
-    opts = {},
+    opts = {
+      provider = "claude",
+      claude = {
+        model = "claude-3-7-sonnet-20250219",
+      },
+    },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
     dependencies = {
