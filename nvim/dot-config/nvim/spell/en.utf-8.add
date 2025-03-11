@@ -238,3 +238,8 @@ eclipse-temurin
 JRE
 JDK
 jwt
+IAM
+S3
+IRSA
+ServiceAccounts
+s3
