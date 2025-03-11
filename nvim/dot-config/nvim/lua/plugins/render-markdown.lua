@@ -8,6 +8,11 @@ return {
         width = "block",
         right_pad = 1,
       },
+      checkbox = {
+        enabled = true,
+        unchecked = { icon = "✘ " },
+        checked = { icon = "✔ " },
+      },
       heading = {
         sign = true,
         icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
