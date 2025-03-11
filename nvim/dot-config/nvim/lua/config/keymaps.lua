@@ -21,8 +21,10 @@ map("i", "<C-T-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move line up" })
 -- Add word to spell list and jump to next misspelled word
 map("n", "zg", "zg]s", { desc = "Add word to spell list and jump to next misspelled word" })
 
-map("n", "<leader>qf", "<cmd>cnext<cr>", { desc = "Go to next quickfix item" })
-map("n", "<leader>qb", "<cmd>cprev<cr>", { desc = "Go to previous quickfix item" })
+map("n", "<leader>xf", "<cmd>cnext<cr>", { desc = "Go to next quickfix item" })
+map("n", "<leader>xb", "<cmd>cprev<cr>", { desc = "Go to previous quickfix item" })
 
 -- work in progsess
 -- map("n", "<leader>rs", "<cmd>g;<c-r><c-w>; s;[a-z]@<=[A-Z];_l&;g<cr>", { desc = "Replace camel case with snake case" })
+
+vim.keymap.set("n", "<leader>bc", ":%s/\r//g<CR>", { noremap = true, silent = true, desc = "Remove carriage returns" })
