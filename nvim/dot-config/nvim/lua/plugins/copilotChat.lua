@@ -42,7 +42,7 @@ return {
       {
         mode = { "n", "v" },
         "<leader>am",
-        "<cmd>CopilotChatCommitStaged<cr>",
+        "<cmd>CopilotChatCommit<cr>",
         desc = "Copilot write commit message for staged changes",
       },
     },
